@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Quickblox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
+           QBSettings.setApplicationID(40946)
+           QBSettings.setAuthKey("kqw5t-9ThKhDfHZ")
+           QBSettings.setAuthSecret("zRMjEyx7KQKdV3q")
+            QBSettings.setAccountKey("P2VM31UfLyZAnxqZEwrx")
+        
         return true
     }
 

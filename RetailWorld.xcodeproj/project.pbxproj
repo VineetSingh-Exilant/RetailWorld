@@ -13,6 +13,28 @@
 		8033FAA31CEC9491000948E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8033FAA21CEC9491000948E2 /* Assets.xcassets */; };
 		8033FAA61CEC9491000948E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8033FAA41CEC9491000948E2 /* LaunchScreen.storyboard */; };
 		8033FAB11CEC9491000948E2 /* RetailWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */; };
+		8033FABE1CEC97A2000948E2 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 8033FABD1CEC97A2000948E2 /* images.png */; };
+		80B8607F1CED918D000B0C45 /* Framework in Resources */ = {isa = PBXBuildFile; fileRef = 80B8607E1CED918D000B0C45 /* Framework */; };
+		80B860811CED9281000B0C45 /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860801CED9281000B0C45 /* Quickblox.framework */; };
+		80B860831CED9287000B0C45 /* QuickbloxWebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860821CED9287000B0C45 /* QuickbloxWebRTC.framework */; };
+		80B860871CED9363000B0C45 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860861CED9363000B0C45 /* CFNetwork.framework */; };
+		80B860891CED9375000B0C45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860881CED9375000B0C45 /* SystemConfiguration.framework */; };
+		80B8608B1CED9387000B0C45 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B8608A1CED9387000B0C45 /* MobileCoreServices.framework */; };
+		80B8608D1CED939A000B0C45 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B8608C1CED939A000B0C45 /* CoreGraphics.framework */; };
+		80B8608F1CED93A3000B0C45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B8608E1CED93A3000B0C45 /* CoreLocation.framework */; };
+		80B860911CED93AC000B0C45 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860901CED93AC000B0C45 /* CoreData.framework */; };
+		80B860931CED93BA000B0C45 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860921CED93BA000B0C45 /* AudioToolbox.framework */; };
+		80B860951CED93CD000B0C45 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860941CED93CD000B0C45 /* CoreMedia.framework */; };
+		80B860971CED93D5000B0C45 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860961CED93D5000B0C45 /* Accelerate.framework */; };
+		80B860991CED93EE000B0C45 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860981CED93EE000B0C45 /* CoreVideo.framework */; };
+		80B8609B1CED93FC000B0C45 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B8609A1CED93FC000B0C45 /* AVFoundation.framework */; };
+		80B8609D1CED9405000B0C45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B8609C1CED9405000B0C45 /* QuartzCore.framework */; };
+		80B8609F1CED9419000B0C45 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B8609E1CED9419000B0C45 /* Security.framework */; };
+		80B860A11CED9476000B0C45 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860A01CED9476000B0C45 /* libz.1.1.3.tbd */; };
+		80B860A31CED9488000B0C45 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860A21CED9488000B0C45 /* libresolv.9.tbd */; };
+		80B860A51CED9493000B0C45 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860A41CED9493000B0C45 /* libxml2.2.tbd */; };
+		80C24E061CEF0D610017E0AD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C24E051CEF0D610017E0AD /* VideoToolbox.framework */; };
+		80C24E081CEF0DA80017E0AD /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C24E071CEF0DA80017E0AD /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +58,29 @@
 		8033FAAC1CEC9491000948E2 /* RetailWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailWorldTests.swift; sourceTree = "<group>"; };
 		8033FAB21CEC9491000948E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8033FABD1CEC97A2000948E2 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		80B8607E1CED918D000B0C45 /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = "<group>"; };
+		80B860801CED9281000B0C45 /* Quickblox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quickblox.framework; path = Framework/Quickblox.framework; sourceTree = "<group>"; };
+		80B860821CED9287000B0C45 /* QuickbloxWebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickbloxWebRTC.framework; path = Framework/QuickbloxWebRTC.framework; sourceTree = "<group>"; };
+		80B860861CED9363000B0C45 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		80B860881CED9375000B0C45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		80B8608A1CED9387000B0C45 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		80B8608C1CED939A000B0C45 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		80B8608E1CED93A3000B0C45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		80B860901CED93AC000B0C45 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		80B860921CED93BA000B0C45 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		80B860941CED93CD000B0C45 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		80B860961CED93D5000B0C45 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		80B860981CED93EE000B0C45 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		80B8609A1CED93FC000B0C45 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		80B8609C1CED9405000B0C45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		80B8609E1CED9419000B0C45 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		80B860A01CED9476000B0C45 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		80B860A21CED9488000B0C45 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		80B860A41CED9493000B0C45 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		80C0C5531CED84E900E66086 /* RetailWorld-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RetailWorld-Bridging-Header.h"; sourceTree = "<group>"; };
+		80C24E051CEF0D610017E0AD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		80C24E071CEF0DA80017E0AD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C24E081CEF0DA80017E0AD /* GLKit.framework in Frameworks */,
+				80C24E061CEF0D610017E0AD /* VideoToolbox.framework in Frameworks */,
+				80B860A51CED9493000B0C45 /* libxml2.2.tbd in Frameworks */,
+				80B860A31CED9488000B0C45 /* libresolv.9.tbd in Frameworks */,
+				80B860A11CED9476000B0C45 /* libz.1.1.3.tbd in Frameworks */,
+				80B8609F1CED9419000B0C45 /* Security.framework in Frameworks */,
+				80B8609D1CED9405000B0C45 /* QuartzCore.framework in Frameworks */,
+				80B8609B1CED93FC000B0C45 /* AVFoundation.framework in Frameworks */,
+				80B860991CED93EE000B0C45 /* CoreVideo.framework in Frameworks */,
+				80B860971CED93D5000B0C45 /* Accelerate.framework in Frameworks */,
+				80B860951CED93CD000B0C45 /* CoreMedia.framework in Frameworks */,
+				80B860931CED93BA000B0C45 /* AudioToolbox.framework in Frameworks */,
+				80B860911CED93AC000B0C45 /* CoreData.framework in Frameworks */,
+				80B8608F1CED93A3000B0C45 /* CoreLocation.framework in Frameworks */,
+				80B8608D1CED939A000B0C45 /* CoreGraphics.framework in Frameworks */,
+				80B8608B1CED9387000B0C45 /* MobileCoreServices.framework in Frameworks */,
+				80B860891CED9375000B0C45 /* SystemConfiguration.framework in Frameworks */,
+				80B860871CED9363000B0C45 /* CFNetwork.framework in Frameworks */,
+				80B860811CED9281000B0C45 /* Quickblox.framework in Frameworks */,
+				80B860831CED9287000B0C45 /* QuickbloxWebRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +124,9 @@
 		8033FA8F1CEC9491000948E2 = {
 			isa = PBXGroup;
 			children = (
+				80C24E071CEF0DA80017E0AD /* GLKit.framework */,
+				80C24E051CEF0D610017E0AD /* VideoToolbox.framework */,
+				80B860A61CED9DD6000B0C45 /* FrameWorks */,
 				8033FA9A1CEC9491000948E2 /* RetailWorld */,
 				8033FAAF1CEC9491000948E2 /* RetailWorldTests */,
 				8033FA991CEC9491000948E2 /* Products */,
@@ -78,11 +146,13 @@
 			isa = PBXGroup;
 			children = (
 				8033FA9B1CEC9491000948E2 /* AppDelegate.swift */,
+				8033FABD1CEC97A2000948E2 /* images.png */,
 				8033FA9D1CEC9491000948E2 /* ViewController.swift */,
 				8033FA9F1CEC9491000948E2 /* Main.storyboard */,
 				8033FAA21CEC9491000948E2 /* Assets.xcassets */,
 				8033FAA41CEC9491000948E2 /* LaunchScreen.storyboard */,
 				8033FAA71CEC9491000948E2 /* Info.plist */,
+				80C0C5531CED84E900E66086 /* RetailWorld-Bridging-Header.h */,
 			);
 			path = RetailWorld;
 			sourceTree = "<group>";
@@ -94,6 +164,40 @@
 				8033FAB21CEC9491000948E2 /* Info.plist */,
 			);
 			path = RetailWorldTests;
+			sourceTree = "<group>";
+		};
+		80B8607D1CED90D5000B0C45 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				80B8607E1CED918D000B0C45 /* Framework */,
+			);
+			name = FrameWorks;
+			sourceTree = "<group>";
+		};
+		80B860A61CED9DD6000B0C45 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				80B860A41CED9493000B0C45 /* libxml2.2.tbd */,
+				80B860A21CED9488000B0C45 /* libresolv.9.tbd */,
+				80B860A01CED9476000B0C45 /* libz.1.1.3.tbd */,
+				80B8609E1CED9419000B0C45 /* Security.framework */,
+				80B8609C1CED9405000B0C45 /* QuartzCore.framework */,
+				80B8609A1CED93FC000B0C45 /* AVFoundation.framework */,
+				80B860981CED93EE000B0C45 /* CoreVideo.framework */,
+				80B860961CED93D5000B0C45 /* Accelerate.framework */,
+				80B860941CED93CD000B0C45 /* CoreMedia.framework */,
+				80B860921CED93BA000B0C45 /* AudioToolbox.framework */,
+				80B860901CED93AC000B0C45 /* CoreData.framework */,
+				80B8608E1CED93A3000B0C45 /* CoreLocation.framework */,
+				80B8608C1CED939A000B0C45 /* CoreGraphics.framework */,
+				80B8608A1CED9387000B0C45 /* MobileCoreServices.framework */,
+				80B860881CED9375000B0C45 /* SystemConfiguration.framework */,
+				80B860861CED9363000B0C45 /* CFNetwork.framework */,
+				80B860821CED9287000B0C45 /* QuickbloxWebRTC.framework */,
+				80B860801CED9281000B0C45 /* Quickblox.framework */,
+				80B8607D1CED90D5000B0C45 /* FrameWorks */,
+			);
+			name = FrameWorks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +250,6 @@
 				TargetAttributes = {
 					8033FA971CEC9491000948E2 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 44XXETDT6W;
 					};
 					8033FAAB1CEC9491000948E2 = {
 						CreatedOnToolsVersion = 7.3;
@@ -180,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8033FAA61CEC9491000948E2 /* LaunchScreen.storyboard in Resources */,
+				80B8607F1CED918D000B0C45 /* Framework in Resources */,
+				8033FABE1CEC97A2000948E2 /* images.png in Resources */,
 				8033FAA31CEC9491000948E2 /* Assets.xcassets in Resources */,
 				8033FAA11CEC9491000948E2 /* Main.storyboard in Resources */,
 			);
@@ -329,10 +434,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RetailWorld/Framework",
+					"$(PROJECT_DIR)/Framework",
+				);
+				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = RetailWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Exilant.RetailWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RetailWorld/RetailWorld-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -340,10 +462,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RetailWorld/Framework",
+					"$(PROJECT_DIR)/Framework",
+				);
+				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = RetailWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Exilant.RetailWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RetailWorld/RetailWorld-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -390,6 +528,7 @@
 				8033FAB71CEC9491000948E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8033FAB81CEC9491000948E2 /* Build configuration list for PBXNativeTarget "RetailWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +537,7 @@
 				8033FABA1CEC9491000948E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
