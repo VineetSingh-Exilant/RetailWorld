@@ -8,6 +8,9 @@
 
 import UIKit
 import Quickblox
+import Fabric
+import DigitsKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            QBSettings.setApplicationID(40946)
            QBSettings.setAuthKey("kqw5t-9ThKhDfHZ")
            QBSettings.setAuthSecret("zRMjEyx7KQKdV3q")
-            QBSettings.setAccountKey("P2VM31UfLyZAnxqZEwrx")
-        
+           QBSettings.setAccountKey("P2VM31UfLyZAnxqZEwrx")
+           Fabric.with([Digits.self])
+
         return true
     }
 

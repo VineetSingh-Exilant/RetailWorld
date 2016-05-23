@@ -39,19 +39,6 @@ class ViewController: UIViewController {
                print("Error")
         }
         
-        
-        QBRequest.downloadFileWithID(4447910, successBlock: { (_, fileData) in
-            
-            print(fileData)
-            
-            }, statusBlock: { (_, _) in
-                
-                
-            }) { (_) in
-                
-        }
-        
-        
 //        var object = QBCOCustomObject()
 //        object.className = "Movies"
 //        // your Class name
