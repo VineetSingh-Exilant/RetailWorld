@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
             print(loginUser)
             }) { (_) in
                 print("Error Occur")
+                print("Show error message")
         }
     }
   }
