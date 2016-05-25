@@ -16,8 +16,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailID: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        emailID.attributedPlaceholder = NSAttributedString(string:"Enter EmailID",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        password.attributedPlaceholder = NSAttributedString(string:"Enter Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        userName.attributedPlaceholder = NSAttributedString(string:"Enter UserName",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        confirmPassword.attributedPlaceholder = NSAttributedString(string:"Confirm Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +58,10 @@ class RegisterViewController: UIViewController {
             QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
             print(user)
             print("Registered")
+                let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
+                self.presentViewController(alert, animated: true, completion: nil)
+                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+                alert.addAction(cancelAction)
             self.dismissViewControllerAnimated(true, completion: nil)
             
           })

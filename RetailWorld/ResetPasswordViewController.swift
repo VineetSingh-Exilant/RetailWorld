@@ -10,11 +10,12 @@ import UIKit
 
 class ResetPasswordViewController: UIViewController {
 
+    
     @IBOutlet var emailID: UITextField!
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        emailID.attributedPlaceholder = NSAttributedString(string:"you@domain.com",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
       
     }
 

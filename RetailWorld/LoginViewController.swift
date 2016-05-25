@@ -16,24 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let authButton = DGTAuthenticateButton(authenticationCompletion: { (session: DGTSession?, error: NSError?) in
-//            if (session != nil) {
-//                // TODO: associate the session userID with your user model
-//                let message = "Phone number: \(session!.phoneNumber)"
-//                let alertController = UIAlertController(title: "You are logged in!", message: message, preferredStyle: .Alert)
-//                alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: .None))
-//                self.presentViewController(alertController, animated: true, completion: .None)
-//            } else {
-//                NSLog("Authentication error: %@", error!.localizedDescription)
-//            }
-//        })
-//        authButton.center = self.view.center
-//        self.view.addSubview(authButton)
-        
-        
-
-        
- 
+        email.attributedPlaceholder = NSAttributedString(string:"Email",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        password.attributedPlaceholder = NSAttributedString(string:"Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +41,7 @@ class LoginViewController: UIViewController {
         let passwordString = password.text
         QBRequest.logInWithUserEmail(emailString!, password: passwordString!, successBlock: { (_, loginUser) in
             print(loginUser)
+        
             }) { (_) in
                 print("Error Occur")
                 print("Show error message")

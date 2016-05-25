@@ -14,6 +14,14 @@
 		8033FAA61CEC9491000948E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8033FAA41CEC9491000948E2 /* LaunchScreen.storyboard */; };
 		8033FAB11CEC9491000948E2 /* RetailWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */; };
 		8033FABE1CEC97A2000948E2 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8033FABD1CEC97A2000948E2 /* Launch.png */; };
+		80B6AFD51CF4237300AE64A0 /* Sign In.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFD41CF4237300AE64A0 /* Sign In.png */; };
+		80B6AFD71CF4278C00AE64A0 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFD61CF4278C00AE64A0 /* Background.jpg */; };
+		80B6AFD91CF42B0700AE64A0 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFD81CF42B0700AE64A0 /* background1.png */; };
+		80B6AFDB1CF42B9800AE64A0 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFDA1CF42B9800AE64A0 /* background2.png */; };
+		80B6AFDF1CF43B3300AE64A0 /* Register.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFDE1CF43B3300AE64A0 /* Register.png */; };
+		80B6AFE11CF43B3B00AE64A0 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFE01CF43B3B00AE64A0 /* login.png */; };
+		80B6AFE31CF445F900AE64A0 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80B6AFE21CF445F900AE64A0 /* bg1.jpg */; };
+		80B6AFE51CF47B6700AE64A0 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B6AFE41CF47B6700AE64A0 /* FoodViewController.swift */; };
 		80B8607F1CED918D000B0C45 /* Framework in Resources */ = {isa = PBXBuildFile; fileRef = 80B8607E1CED918D000B0C45 /* Framework */; };
 		80B860811CED9281000B0C45 /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860801CED9281000B0C45 /* Quickblox.framework */; };
 		80B860831CED9287000B0C45 /* QuickbloxWebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B860821CED9287000B0C45 /* QuickbloxWebRTC.framework */; };
@@ -43,6 +51,8 @@
 		80D575401CF2D98E00E9AF4E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5753C1CF2D98E00E9AF4E /* TwitterCore.framework */; };
 		80D575421CF2E5E500E9AF4E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D575411CF2E5E500E9AF4E /* RegisterViewController.swift */; };
 		80D575441CF2FA2A00E9AF4E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D575431CF2FA2A00E9AF4E /* ResetPasswordViewController.swift */; };
+		80D575461CF3282600E9AF4E /* PasswordReset.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D575451CF3282600E9AF4E /* PasswordReset.png */; };
+		80D575481CF3284F00E9AF4E /* ResetMyPasswordBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D575471CF3284F00E9AF4E /* ResetMyPasswordBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +77,14 @@
 		8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailWorldTests.swift; sourceTree = "<group>"; };
 		8033FAB21CEC9491000948E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8033FABD1CEC97A2000948E2 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
+		80B6AFD41CF4237300AE64A0 /* Sign In.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In.png"; sourceTree = "<group>"; };
+		80B6AFD61CF4278C00AE64A0 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
+		80B6AFD81CF42B0700AE64A0 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		80B6AFDA1CF42B9800AE64A0 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		80B6AFDE1CF43B3300AE64A0 /* Register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Register.png; sourceTree = "<group>"; };
+		80B6AFE01CF43B3B00AE64A0 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		80B6AFE21CF445F900AE64A0 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
+		80B6AFE41CF47B6700AE64A0 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		80B8607E1CED918D000B0C45 /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = "<group>"; };
 		80B860801CED9281000B0C45 /* Quickblox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quickblox.framework; path = Framework/Quickblox.framework; sourceTree = "<group>"; };
 		80B860821CED9287000B0C45 /* QuickbloxWebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickbloxWebRTC.framework; path = Framework/QuickbloxWebRTC.framework; sourceTree = "<group>"; };
@@ -97,6 +115,8 @@
 		80D5753C1CF2D98E00E9AF4E /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
 		80D575411CF2E5E500E9AF4E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		80D575431CF2FA2A00E9AF4E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		80D575451CF3282600E9AF4E /* PasswordReset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PasswordReset.png; sourceTree = "<group>"; };
+		80D575471CF3284F00E9AF4E /* ResetMyPasswordBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResetMyPasswordBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +192,7 @@
 				8033FA9B1CEC9491000948E2 /* AppDelegate.swift */,
 				8033FA9D1CEC9491000948E2 /* ViewController.swift */,
 				8033FA9F1CEC9491000948E2 /* Main.storyboard */,
+				80B6AFE41CF47B6700AE64A0 /* FoodViewController.swift */,
 				80D575431CF2FA2A00E9AF4E /* ResetPasswordViewController.swift */,
 				80D575411CF2E5E500E9AF4E /* RegisterViewController.swift */,
 				80D5752F1CF2C3EE00E9AF4E /* LoginViewController.swift */,
@@ -229,7 +250,16 @@
 		80D575331CF2C5CB00E9AF4E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				80B6AFE21CF445F900AE64A0 /* bg1.jpg */,
+				80B6AFDE1CF43B3300AE64A0 /* Register.png */,
+				80B6AFE01CF43B3B00AE64A0 /* login.png */,
+				80B6AFDA1CF42B9800AE64A0 /* background2.png */,
+				80B6AFD61CF4278C00AE64A0 /* Background.jpg */,
+				80B6AFD81CF42B0700AE64A0 /* background1.png */,
 				8033FABD1CEC97A2000948E2 /* Launch.png */,
+				80B6AFD41CF4237300AE64A0 /* Sign In.png */,
+				80D575451CF3282600E9AF4E /* PasswordReset.png */,
+				80D575471CF3284F00E9AF4E /* ResetMyPasswordBtn.png */,
 				80D575341CF2D43400E9AF4E /* Bg.png */,
 			);
 			name = image;
@@ -318,13 +348,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B6AFD51CF4237300AE64A0 /* Sign In.png in Resources */,
+				80B6AFE31CF445F900AE64A0 /* bg1.jpg in Resources */,
+				80B6AFE11CF43B3B00AE64A0 /* login.png in Resources */,
+				80B6AFD71CF4278C00AE64A0 /* Background.jpg in Resources */,
 				8033FAA61CEC9491000948E2 /* LaunchScreen.storyboard in Resources */,
 				80B8607F1CED918D000B0C45 /* Framework in Resources */,
+				80D575461CF3282600E9AF4E /* PasswordReset.png in Resources */,
 				8033FABE1CEC97A2000948E2 /* Launch.png in Resources */,
+				80B6AFDF1CF43B3300AE64A0 /* Register.png in Resources */,
 				80D575351CF2D43400E9AF4E /* Bg.png in Resources */,
+				80B6AFD91CF42B0700AE64A0 /* background1.png in Resources */,
+				80D575481CF3284F00E9AF4E /* ResetMyPasswordBtn.png in Resources */,
 				8033FAA31CEC9491000948E2 /* Assets.xcassets in Resources */,
 				8033FAA11CEC9491000948E2 /* Main.storyboard in Resources */,
 				80D5753F1CF2D98E00E9AF4E /* DigitsKitResources.bundle in Resources */,
+				80B6AFDB1CF42B9800AE64A0 /* background2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +401,7 @@
 				8033FA9E1CEC9491000948E2 /* ViewController.swift in Sources */,
 				80D575441CF2FA2A00E9AF4E /* ResetPasswordViewController.swift in Sources */,
 				8033FA9C1CEC9491000948E2 /* AppDelegate.swift in Sources */,
+				80B6AFE51CF47B6700AE64A0 /* FoodViewController.swift in Sources */,
 				80D575421CF2E5E500E9AF4E /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
