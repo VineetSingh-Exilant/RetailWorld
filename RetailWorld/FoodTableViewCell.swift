@@ -16,9 +16,10 @@ class FoodTableViewCell: UITableViewCell {
     @IBOutlet var foodPrice: UILabel!
     @IBOutlet var foodName: UILabel!
     @IBOutlet var foodImage: UIImageView!
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -32,4 +33,5 @@ class FoodTableViewCell: UITableViewCell {
         foodQuantity.text = String(foodQuantityStepper.value)
         totalPrice.text = String(Double(foodPrice.text!)! * Double(foodQuantity.text!)!)
     }
+    
 }

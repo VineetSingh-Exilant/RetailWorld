@@ -9,13 +9,11 @@
 import UIKit
 import DigitsKit
 
-
-
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet var confirmPassword: UITextField!
     @IBOutlet var password: UITextField!
-
+    
     @IBOutlet var mobileNo: UITextField!
     @IBOutlet var emailID: UITextField!
     override func viewDidLoad() {
@@ -25,32 +23,22 @@ class RegisterViewController: UIViewController {
         mobileNo.attributedPlaceholder = NSAttributedString(string:"Enter Mobile No.",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         confirmPassword.attributedPlaceholder = NSAttributedString(string:"Confirm Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-   
+    
+    
     @IBAction func register(sender: AnyObject)
     {
         if password.text! != confirmPassword.text!
         {
             let alert = UIAlertController(title: "Password", message: "Password MisMatch", preferredStyle: .Alert)
-        self.presentViewController(alert, animated: true, completion: nil)
-         let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
-        alert.addAction(cancelAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+            let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+            alert.addAction(cancelAction)
             
             
         }else{
@@ -59,10 +47,10 @@ class RegisterViewController: UIViewController {
             digits.logOut()
             let configuration = DGTAuthenticationConfiguration(accountFields: .DefaultOptionMask)
             let theme = DGTAppearance()
-                    theme.bodyFont = UIFont.systemFontOfSize(17)
-                    theme.labelFont = UIFont.systemFontOfSize(17)
-                    theme.accentColor = UIColor.blueColor()
-                    theme.backgroundColor = UIColor.whiteColor()
+            theme.bodyFont = UIFont.systemFontOfSize(17)
+            theme.labelFont = UIFont.systemFontOfSize(17)
+            theme.accentColor = UIColor.blueColor()
+            theme.backgroundColor = UIColor.whiteColor()
             
             configuration.appearance = theme
             configuration.phoneNumber = self.mobileNo.text!
@@ -70,26 +58,26 @@ class RegisterViewController: UIViewController {
                 if err == nil{
                     print(ses)
                     print(ses.userID)
-                   
-                                let user = QBUUser()
-                                user.phone = self.mobileNo.text
-                                user.password = self.password.text
-                                user.login = self.mobileNo.text
-                                user.email = self.emailID.text
-                                user.twitterDigitsID = ses.userID
-                                QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
-                                print(user)
-                                print("Registered")
-                                    let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
-                                    self.presentViewController(alert, animated: true, completion: nil)
-                                    let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
-                                    alert.addAction(cancelAction)
-                                self.dismissViewControllerAnimated(true, completion: nil)
-                                
-                              })
-                              { (errorResponse) -> Void in
-                                print("Error Occur")
-                                }
+                    
+                    let user = QBUUser()
+                    user.phone = self.mobileNo.text
+                    user.password = self.password.text
+                    user.login = self.mobileNo.text
+                    user.email = self.emailID.text
+                    user.twitterDigitsID = ses.userID
+                    QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
+                        print(user)
+                        print("Registered")
+                        let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+                        alert.addAction(cancelAction)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
+                        })
+                    { (errorResponse) -> Void in
+                        print("Error Occur")
+                    }
                     
                     
                     
@@ -101,26 +89,26 @@ class RegisterViewController: UIViewController {
             })
             
             
-
-//            let user = QBUUser()
-//            user.phone = self.mobileNo.text
-//            user.password = self.password.text
-//            user.email = self.emailID.text
-//            QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
-//            print(user)
-//            print("Registered")
-//                let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
-//                self.presentViewController(alert, animated: true, completion: nil)
-//                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
-//                alert.addAction(cancelAction)
-//            self.dismissViewControllerAnimated(true, completion: nil)
-//            
-//          })
-//          { (errorResponse) -> Void in
-//            print("Error Occur")
-//            }
-
-           }
+            
+            //            let user = QBUUser()
+            //            user.phone = self.mobileNo.text
+            //            user.password = self.password.text
+            //            user.email = self.emailID.text
+            //            QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
+            //            print(user)
+            //            print("Registered")
+            //                let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
+            //                self.presentViewController(alert, animated: true, completion: nil)
+            //                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+            //                alert.addAction(cancelAction)
+            //            self.dismissViewControllerAnimated(true, completion: nil)
+            //
+            //          })
+            //          { (errorResponse) -> Void in
+            //            print("Error Occur")
+            //            }
+            
         }
     }
+}
 

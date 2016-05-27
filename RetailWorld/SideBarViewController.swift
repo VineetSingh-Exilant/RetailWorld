@@ -15,14 +15,11 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     var categoryArray = NSMutableArray()
     
     
-    var first = FirstViewController()
+    var first = OfferViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "WelCome To Retail World"
          categoryArray = ["Food", "Beauty & Care", "Stationery", "Fruits & Vegetables"]
-        
-       // let sw = SWRevealViewController()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

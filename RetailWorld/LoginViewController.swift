@@ -12,12 +12,9 @@ import DigitsKit
 
 class LoginViewController: UIViewController {
 
-  
-    
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         email.attributedPlaceholder = NSAttributedString(string:"Enter your Mobile No.",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
@@ -73,30 +70,5 @@ class LoginViewController: UIViewController {
     
                     
     }
-            
-//            QBRequest.logInWithTwitterDigitsAuthHeaders(headers, successBlock: { (_, user) in
-//                
-//                print(user?.fullName)
-//                
-//                
-//                }, errorBlock: { (_) in
-//                    
-//            })
-            
-        //}
-        
-        
-   
     
-//        let emailString = email.text
-//        let passwordString = password.text
-//        QBRequest.logInWithUserEmail(emailString!, password: passwordString!, successBlock: { (_, loginUser) in
-//            print(loginUser)
-//        
-//            }) { (_) in
-//                print("Error Occur")
-//                print("Show error message")
-//        }
-    
-    //}
 }

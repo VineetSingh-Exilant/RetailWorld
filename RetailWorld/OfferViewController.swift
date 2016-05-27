@@ -8,17 +8,15 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class OfferViewController: UIViewController {
 
     @IBOutlet weak var openSideBar: UIBarButtonItem!
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _ = self.revealViewController
         self.openSideBar.target = self.revealViewController()
         self.openSideBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-       
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,13 +24,6 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    
-    
-    @IBAction func openSideBar(sender: AnyObject)
-    {
-        
-    }
 
 }
 
