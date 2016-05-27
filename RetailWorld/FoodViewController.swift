@@ -77,6 +77,10 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
     return cell
     }
+    @IBAction func backAction(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return itemsArray.count
@@ -100,5 +104,5 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell!.accessoryType = .None
     }
-    }
+}
 

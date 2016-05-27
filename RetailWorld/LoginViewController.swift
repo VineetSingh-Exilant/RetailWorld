@@ -59,9 +59,12 @@ class LoginViewController: UIViewController {
             QBRequest.logInWithUserLogin(self.email.text!, password: self.password.text!, successBlock: { (_, user) in
                 
                 print(user?.email)
-                let tabBarController = self.storyboard?.instantiateViewControllerWithIdentifier("TabBar") as? UITabBarController
-                self.navigationController?.pushViewController(tabBarController!, animated: true)
+               // let revealController = self.storyboard?.instantiateViewControllerWithIdentifier("Reveal") as? SWRevealViewController
+                //self.navigationController?.pushViewController(revealController!, animated: true)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
+                let revealController = storyBoard.instantiateViewControllerWithIdentifier("Reveal") as! SWRevealViewController
+                self.presentViewController(revealController, animated:true, completion:nil)
                 }) { (_) in
                     
                     
