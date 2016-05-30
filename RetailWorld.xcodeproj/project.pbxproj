@@ -12,8 +12,9 @@
 		80114FA71CF81741000E9ED4 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80114FA31CF81741000E9ED4 /* FavoritesViewController.swift */; };
 		80114FA81CF81741000E9ED4 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80114FA41CF81741000E9ED4 /* SideBarViewController.swift */; };
 		80114FC91CF81761000E9ED4 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80114FA91CF81761000E9ED4 /* reveal-icon@2x.png */; };
-		80114FF01CF84340000E9ED4 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80114FEF1CF84340000E9ED4 /* ChartViewController.swift */; };
+		80114FF01CF84340000E9ED4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80114FEF1CF84340000E9ED4 /* CartViewController.swift */; };
 		80114FF21CF84592000E9ED4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80114FF11CF84592000E9ED4 /* AccountViewController.swift */; };
+		80114FF41CF85833000E9ED4 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 80114FF31CF85833000E9ED4 /* backButton.png */; };
 		8033FA9C1CEC9491000948E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033FA9B1CEC9491000948E2 /* AppDelegate.swift */; };
 		8033FAA11CEC9491000948E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8033FA9F1CEC9491000948E2 /* Main.storyboard */; };
 		8033FAA31CEC9491000948E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8033FAA21CEC9491000948E2 /* Assets.xcassets */; };
@@ -79,8 +80,9 @@
 		80114FA31CF81741000E9ED4 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		80114FA41CF81741000E9ED4 /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		80114FA91CF81761000E9ED4 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
-		80114FEF1CF84340000E9ED4 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewController.swift; path = ../ChartViewController.swift; sourceTree = "<group>"; };
+		80114FEF1CF84340000E9ED4 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = ../CartViewController.swift; sourceTree = "<group>"; };
 		80114FF11CF84592000E9ED4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		80114FF31CF85833000E9ED4 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
 		8033FA981CEC9491000948E2 /* RetailWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033FA9B1CEC9491000948E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8033FAA01CEC9491000948E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,7 +192,7 @@
 			children = (
 				80114FA21CF81741000E9ED4 /* OfferViewController.swift */,
 				80114FA31CF81741000E9ED4 /* FavoritesViewController.swift */,
-				80114FEF1CF84340000E9ED4 /* ChartViewController.swift */,
+				80114FEF1CF84340000E9ED4 /* CartViewController.swift */,
 				80114FF11CF84592000E9ED4 /* AccountViewController.swift */,
 				80114FA41CF81741000E9ED4 /* SideBarViewController.swift */,
 				80B6AFE41CF47B6700AE64A0 /* FoodViewController.swift */,
@@ -315,6 +317,7 @@
 		80D575331CF2C5CB00E9AF4E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				80114FF31CF85833000E9ED4 /* backButton.png */,
 				80114FA91CF81761000E9ED4 /* reveal-icon@2x.png */,
 				80B6AFE21CF445F900AE64A0 /* bg1.jpg */,
 				80B6AFDE1CF43B3300AE64A0 /* Register.png */,
@@ -426,6 +429,7 @@
 				8033FAA31CEC9491000948E2 /* Assets.xcassets in Resources */,
 				8033FAA11CEC9491000948E2 /* Main.storyboard in Resources */,
 				80D5753F1CF2D98E00E9AF4E /* DigitsKitResources.bundle in Resources */,
+				80114FF41CF85833000E9ED4 /* backButton.png in Resources */,
 				80B6AFDB1CF42B9800AE64A0 /* background2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +470,7 @@
 				80D575441CF2FA2A00E9AF4E /* ResetPasswordViewController.swift in Sources */,
 				8033FA9C1CEC9491000948E2 /* AppDelegate.swift in Sources */,
 				80B6AFE51CF47B6700AE64A0 /* FoodViewController.swift in Sources */,
-				80114FF01CF84340000E9ED4 /* ChartViewController.swift in Sources */,
+				80114FF01CF84340000E9ED4 /* CartViewController.swift in Sources */,
 				80114FA61CF81741000E9ED4 /* OfferViewController.swift in Sources */,
 				80114FA81CF81741000E9ED4 /* SideBarViewController.swift in Sources */,
 				80114FA51CF81741000E9ED4 /* SWRevealViewController.m in Sources */,

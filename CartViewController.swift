@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChartViewController: UIViewController {
+class CartViewController: UIViewController {
 
     @IBOutlet var openSideBar: UIBarButtonItem!
     override func viewDidLoad() {

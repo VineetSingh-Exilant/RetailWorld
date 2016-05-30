@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1008" y="1988"/>
+            <point key="canvasLocation" x="-1133" y="2686"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="B2T-n9-hCy">
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vH-Cj-Pz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107" y="1326"/>
+            <point key="canvasLocation" x="-1138" y="1805"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="POe-YO-9wq">
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdJ-ha-65t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-650" y="1326"/>
+            <point key="canvasLocation" x="-618" y="1805"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="VLr-sI-iRO">
@@ -273,14 +273,14 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epr-hG-nRq">
-                                <rect key="frame" x="5" y="20" width="112" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="5" y="20" width="33" height="30"/>
+                                <state key="normal" backgroundImage="backButton.png"/>
                                 <connections>
                                     <action selector="backAction:" destination="tpx-ej-oEO" eventType="touchUpInside" id="72M-Pe-WnD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnW-je-6B5">
-                                <rect key="frame" x="106" y="686" width="203" height="30"/>
+                                <rect key="frame" x="116" y="695" width="203" height="30"/>
                                 <state key="normal" title="Confirm Order"/>
                             </button>
                         </subviews>
@@ -303,7 +303,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="686" y="-444"/>
+            <point key="canvasLocation" x="678" y="-1238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QnT-Z1-Vgv">
@@ -322,7 +322,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xda-G8-smA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1520" y="1112"/>
+            <point key="canvasLocation" x="-1639" y="1805"/>
         </scene>
         <!--Offer View Controller-->
         <scene sceneID="JEN-J3-3dc">
@@ -346,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNx-Dj-wzj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="-528"/>
+            <point key="canvasLocation" x="51" y="-394"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="WNO-ZY-48b">
@@ -371,12 +371,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjF-hi-5F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="303"/>
+            <point key="canvasLocation" x="38" y="174"/>
         </scene>
-        <!--Chart View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="cCv-cl-dCK">
             <objects>
-                <viewController id="4FL-TO-ND7" customClass="ChartViewController" customModule="RetailWorld" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4FL-TO-ND7" customClass="CartViewController" customModule="RetailWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zSx-44-hGX"/>
                         <viewControllerLayoutGuide type="bottom" id="RA5-ot-ora"/>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDj-1R-ei9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="439"/>
+            <point key="canvasLocation" x="228" y="-1667"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="ICt-eY-eO6">
@@ -420,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnA-nn-bUh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="274"/>
+            <point key="canvasLocation" x="63" y="-953"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="K4V-cs-ST3">
@@ -442,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUd-Yt-Drn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1533" y="-1244"/>
+            <point key="canvasLocation" x="-1485" y="-1546"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KhZ-IS-P4R">
@@ -463,7 +463,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zz-B5-XDF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784" y="-1208"/>
+            <point key="canvasLocation" x="-782" y="-1546"/>
         </scene>
         <!--Side Bar View Controller-->
         <scene sceneID="97y-SG-BVJ">
@@ -509,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="la3-51-2H6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1314" y="392"/>
+            <point key="canvasLocation" x="-1490" y="-90"/>
         </scene>
         <!--Offer-->
         <scene sceneID="LAm-YH-2j5">
@@ -529,7 +529,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRa-vq-4pC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163" y="-411"/>
+            <point key="canvasLocation" x="-502" y="-312"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="vnY-g9-aUp">
@@ -549,7 +549,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzN-PE-GQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-743" y="-324"/>
+            <point key="canvasLocation" x="-433" y="-866"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dcc-KC-6jh">
@@ -567,14 +567,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5w-v9-Gyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1436" y="-351"/>
+            <point key="canvasLocation" x="-1485" y="-823"/>
         </scene>
-        <!--Chart-->
+        <!--Cart-->
         <scene sceneID="8U7-dd-GQF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t7S-Ft-OJb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chart" id="hLi-Hj-0p6"/>
+                    <tabBarItem key="tabBarItem" title="Cart" id="ZpT-gv-Hdo"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJ5-vZ-gNR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -587,7 +588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7w-tF-mBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="-1071"/>
+            <point key="canvasLocation" x="-183" y="-1667"/>
         </scene>
         <!--Account-->
         <scene sceneID="BYZ-xF-an2">
@@ -607,7 +608,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZ3-YO-wdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="590"/>
+            <point key="canvasLocation" x="-607" y="247"/>
         </scene>
     </scenes>
     <resources>
@@ -615,13 +616,14 @@
         <image name="Register.png" width="223" height="69"/>
         <image name="ResetMyPasswordBtn.png" width="749" height="106"/>
         <image name="Sign In.png" width="194" height="30"/>
+        <image name="backButton.png" width="128" height="128"/>
         <image name="bg1.jpg" width="640" height="1136"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6cl-fF-HDb"/>
-        <segue reference="0Pt-bz-s5R"/>
+        <segue reference="emN-um-BQB"/>
+        <segue reference="A1B-zF-C9S"/>
         <segue reference="f8t-aZ-xMJ"/>
-        <segue reference="Rnm-Mk-uKN"/>
     </inferredMetricsTieBreakers>
 </document>
