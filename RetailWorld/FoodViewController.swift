@@ -10,10 +10,13 @@ import UIKit
 
 class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var itemsArray = [FoodItems]()
+    var cartObjects = [FoodItems]()
+    var cartSelectedRow:Int?
+     var fileIdArray = NSMutableArray()
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         QBRequest.objectsWithClassName("Food", successBlock: { (_, items) in
             for item in items!{
                 let foodObject = item as! QBCOCustomObject
@@ -22,11 +25,8 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 eachItem.fileId = foodObject.fields?.objectForKey("FileID") as? UInt
                 eachItem.price = foodObject.fields?.objectForKey("Price") as? Double
                 eachItem.itemCreatedBy = foodObject.userID
-                
                 eachItem.quantity = foodObject.fields?.objectForKey("Quantity") as? Double
-                
                 self.itemsArray.append(eachItem)
-                
                 print(self.itemsArray.count)
                 self.tableView.reloadData()
                 
@@ -58,7 +58,6 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         let foodItem = itemsArray[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! FoodTableViewCell
-        tableView.allowsMultipleSelection = true
         cell.accessoryType = .None
         cell.foodName.text = foodItem.name!
         cell.foodPrice.text = String(foodItem.price!)
@@ -89,14 +88,15 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     {
         print("Selected Row is:\(indexPath.row)")
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        let selectedRow = tableView.indexPathForSelectedRow
+        var selectedRow = tableView.indexPathForSelectedRow
         if (selectedRow != nil){
         cell!.accessoryType = .Checkmark
         }else
         {
             cell!.accessoryType = .None
         }
-        
+        cartObjects.append(itemsArray[indexPath.row])
+        cartSelectedRow = indexPath.row
 
     }
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
@@ -104,5 +104,34 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell!.accessoryType = .None
     }
-}
 
+    @IBAction func cartButtonTapped(sender: AnyObject)
+    {
+        print("cart Button Tapped")
+        if let _ = cartSelectedRow{
+        let foodSelected = cartObjects[cartSelectedRow!]
+        let customObject = QBCOCustomObject()
+        customObject.className = "cart"
+        customObject.fields?.setValue(foodSelected.fileId, forKey: "FileID")
+        customObject.fields?.setValue(foodSelected.name, forKey: "Name")
+        customObject.fields?.setValue(foodSelected.quantity, forKey: "Quantity")
+        customObject.fields?.setValue(foodSelected.price, forKey: "Price")
+            if !(fileIdArray.containsObject(isEqual(foodSelected.fileId))){
+        QBRequest.createObject(customObject, successBlock: { (_, _) in
+            
+            print("Succesfully created object")
+            self.fileIdArray.addObject(foodSelected.fileId!)
+            
+            }) { (_) in
+                
+                print("error occured")
+                
+        }
+            }
+        
+
+        
+        
+        }
+}
+}

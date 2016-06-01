@@ -25,4 +25,5 @@ class FoodItems: NSObject {
         super.init()
         
     }
+  
 }

@@ -34,4 +34,5 @@ class FoodTableViewCell: UITableViewCell {
         totalPrice.text = String(Double(foodPrice.text!)! * Double(foodQuantity.text!)!)
     }
     
+   
 }

@@ -10,15 +10,14 @@ import UIKit
 
 class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet var customView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
     var categoryArray = NSMutableArray()
-    
-    
-    var first = OfferViewController()
+    var offer = OfferViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "WelCome To Retail World"
+        self.title = "Welcome To Retail World"
          categoryArray = ["Food", "Beauty & Care", "Stationery", "Fruits & Vegetables"]
     }
 
@@ -37,11 +36,8 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         cell.textLabel!.text = categoryArray.objectAtIndex(indexPath.row) as? String
-       
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
@@ -49,8 +45,10 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let selectedRow = indexPath.row
         switch selectedRow {
         case 0:
-             let foodController = self.storyboard?.instantiateViewControllerWithIdentifier("Food") as? FoodViewController
+            let foodController = self.storyboard?.instantiateViewControllerWithIdentifier("Food") as? FoodViewController
             self.presentViewController(foodController!, animated:true, completion:nil)
+           // self.tableView.addSubview(customView)
+            print("Hello")
         default:
             print("Default Case")
         }
