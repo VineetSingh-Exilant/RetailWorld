@@ -347,6 +347,7 @@
                     <navigationItem key="navigationItem" id="BDE-hR-BTW">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="aOY-93-n5y"/>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="openSideBar" destination="aOY-93-n5y" id="2tR-1o-9RP"/>
                     </connections>
@@ -450,7 +451,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="51" y="-394"/>
+            <point key="canvasLocation" x="-727" y="54"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="WNO-ZY-48b">
@@ -475,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjF-hi-5F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="174"/>
+            <point key="canvasLocation" x="-1686" y="836"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="cCv-cl-dCK">
@@ -486,7 +487,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RA5-ot-ora"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lfr-F9-fd3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="215" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-Zo-DL4">
@@ -553,7 +554,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTf-bH-vdj">
                                                     <rect key="frame" x="333" y="75" width="48" height="35"/>
-                                                    <state key="normal" image="81139694-4EC8-463E-9A5D-9471D4FA44D4"/>
+                                                    <state key="normal" image="798FF8A7-3879-4650-9E7D-225C489EAD07"/>
                                                     <connections>
                                                         <action selector="cartButtonTapped:" destination="tpx-ej-oEO" eventType="touchUpInside" id="8nh-wM-GE3"/>
                                                     </connections>
@@ -588,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDj-1R-ei9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="-1667"/>
+            <point key="canvasLocation" x="245" y="-1285"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="ICt-eY-eO6">
@@ -612,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnA-nn-bUh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-296" y="-972"/>
+            <point key="canvasLocation" x="-357" y="-616"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="K4V-cs-ST3">
@@ -623,10 +624,11 @@
                         <viewControllerLayoutGuide type="bottom" id="GsJ-Th-3dm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VLF-fK-pNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="mIH-1C-N3f" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="2tl-YV-Bvm"/>
                         <segue destination="uJi-Bb-RzQ" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="jGt-wL-YKe"/>
@@ -634,13 +636,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUd-Yt-Drn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1485" y="-1546"/>
+            <point key="canvasLocation" x="-1707" y="-1952"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KhZ-IS-P4R">
             <objects>
                 <tabBarController id="uJi-Bb-RzQ" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gPb-zJ-kvc">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -655,7 +658,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zz-B5-XDF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-782" y="-1546"/>
+            <point key="canvasLocation" x="-1257" y="-1285"/>
         </scene>
         <!--Side Bar View Controller-->
         <scene sceneID="97y-SG-BVJ">
@@ -666,7 +669,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rZ9-EN-cGh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XQf-2x-vKs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="keL-iY-SZZ">
@@ -691,6 +694,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6aD-aM-hNR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="customView" destination="YGz-bN-Mgr" id="nV9-Zs-Oic"/>
                         <outlet property="tableView" destination="keL-iY-SZZ" id="PRZ-vt-2GA"/>
@@ -702,7 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="la3-51-2H6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1490" y="-90"/>
+            <point key="canvasLocation" x="-1707" y="-605"/>
         </scene>
         <!--Offer-->
         <scene sceneID="LAm-YH-2j5">
@@ -722,7 +726,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRa-vq-4pC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-502" y="-312"/>
+            <point key="canvasLocation" x="-1282" y="54"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="vnY-g9-aUp">
@@ -742,13 +746,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzN-PE-GQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-433" y="-866"/>
+            <point key="canvasLocation" x="-846" y="-616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dcc-KC-6jh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mIH-1C-N3f" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vWZ-bn-UR3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -760,7 +765,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5w-v9-Gyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1485" y="-823"/>
+            <point key="canvasLocation" x="-1715" y="-1313"/>
         </scene>
         <!--Cart-->
         <scene sceneID="8U7-dd-GQF">
@@ -769,6 +774,7 @@
                     <tabBarItem key="tabBarItem" title="Cart" id="ZpT-gv-Hdo"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJ5-vZ-gNR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -780,7 +786,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7w-tF-mBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="-1667"/>
+            <point key="canvasLocation" x="-449" y="-1285"/>
         </scene>
         <!--Account-->
         <scene sceneID="BYZ-xF-an2">
@@ -900,11 +906,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-607" y="247"/>
+            <point key="canvasLocation" x="-1686" y="123"/>
         </scene>
     </scenes>
     <resources>
-        <image name="81139694-4EC8-463E-9A5D-9471D4FA44D4" width="35" height="35">
+        <image name="798FF8A7-3879-4650-9E7D-225C489EAD07" width="35" height="35">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1046,9 +1052,9 @@ AB0rA
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Pt-bz-s5R"/>
+        <segue reference="f8t-aZ-xMJ"/>
         <segue reference="Rnm-Mk-uKN"/>
         <segue reference="6cl-fF-HDb"/>
-        <segue reference="f8t-aZ-xMJ"/>
+        <segue reference="0Pt-bz-s5R"/>
     </inferredMetricsTieBreakers>
 </document>
