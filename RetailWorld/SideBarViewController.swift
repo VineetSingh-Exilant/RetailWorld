@@ -14,30 +14,16 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     weak var delegate:SideBarViewControllerDelegate?
     var data:Int?
     @IBOutlet var customView: UIView!
-<<<<<<< Updated upstream
-=======
     var offer:OfferViewController!
-    
-    
->>>>>>> Stashed changes
     @IBOutlet weak var tableView: UITableView!
     
     var categoryArray = NSMutableArray()
-<<<<<<< Updated upstream
     var gadgetsyArray = NSMutableArray()
-    var offer = OfferViewController()
-=======
->>>>>>> Stashed changes
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Welcome To Retail World"
          categoryArray = ["Food", "Beauty & Care", "Stationery", "Fruits & Vegetables"]
-<<<<<<< Updated upstream
          gadgetsyArray = ["iPhone", "MacBook Pro", "Mac Mini", "iMac"]
-
-=======
-        
->>>>>>> Stashed changes
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,9 +81,7 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-<<<<<<< Updated upstream
         self.revealViewController().rightRevealToggleAnimated(true)
-=======
         let selectedRow = indexPath.row
         if offer == nil{
         
@@ -116,7 +100,6 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
 //        default:
 //            print("Default Case")
 //        }
->>>>>>> Stashed changes
     }
     
 }
