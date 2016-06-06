@@ -65,6 +65,7 @@ class AccountViewController: UIViewController,UITableViewDataSource,UITableViewD
             print("Logut Pressed")
             QBRequest.logOutWithSuccessBlock({ (_) in
               self.dismissViewControllerAnimated(true, completion: nil)
+                //self.presentViewController(self.login, animated: true, completion: nil)
                 self.navigationController?.pushViewController(self.login, animated: true)
                 }, errorBlock: { (_) in
                     
