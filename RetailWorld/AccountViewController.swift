@@ -55,6 +55,7 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
         {
         case 0:
             print("Profile Selected")
+            
         case 1:
             print("Settings Selected")
         case 2:
@@ -66,7 +67,7 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
             })
             let login = self.storyboard?.instantiateViewControllerWithIdentifier("login") as? LoginViewController
             self.presentViewController(login!, animated: true, completion: nil)
-            //self.navigationController?.pushViewController(login!, animated: true)
+           // self.navigationController?.pushViewController(login!, animated: true)
             
         default:
             print("Default case")

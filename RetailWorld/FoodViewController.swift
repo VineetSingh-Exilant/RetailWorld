@@ -20,7 +20,7 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         QBRequest.objectsWithClassName("Food", successBlock: { (_, items) in
             for item in items!{
                 let foodObject = item as! QBCOCustomObject
-                let eachItem = FoodItems()
+                var eachItem = FoodItems()
                 eachItem.name = foodObject.fields?.objectForKey("Name") as? String
                 eachItem.fileId = foodObject.fields?.objectForKey("FileID") as? UInt
                 eachItem.price = foodObject.fields?.objectForKey("Price") as? Double

@@ -80,6 +80,7 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         self.revealViewController().rightRevealToggleAnimated(true)
+                
     }
     
     
