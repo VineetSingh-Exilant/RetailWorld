@@ -82,4 +82,5 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.revealViewController().rightRevealToggleAnimated(true)
     }
     
+    
 }

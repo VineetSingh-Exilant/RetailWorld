@@ -8,8 +8,9 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
-
+class AccountViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var accountArray = NSMutableArray()
+   // var login = LoginViewController()
     @IBOutlet var openSideBar: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class AccountViewController: UIViewController {
         self.openSideBar.target = self.revealViewController()
         self.openSideBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        accountArray = ["Profile","Settings","Logout"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,5 +36,40 @@ class AccountViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return accountArray.count
+    }
+    
+    
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+{
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+    cell?.textLabel?.text = accountArray.objectAtIndex(indexPath.row) as! String
+    return cell!
+}
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let selectedRow = indexPath.row
+        switch selectedRow
+        {
+        case 0:
+            print("Profile Selected")
+        case 1:
+            print("Settings Selected")
+        case 2:
+            print("Logout Selected")
+            QBRequest.logOutWithSuccessBlock({ (_) in
+                print("Logout")
+                }, errorBlock: { (_) in
+                    print("Error Occur")
+            })
+            let login = self.storyboard?.instantiateViewControllerWithIdentifier("login") as? LoginViewController
+            self.presentViewController(login!, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(login!, animated: true)
+            
+        default:
+            print("Default case")
+        }
+    }
 }
