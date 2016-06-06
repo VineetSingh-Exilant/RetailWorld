@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            QBSettings.setAccountKey("P2VM31UfLyZAnxqZEwrx")
            Fabric.with([Digits.self])
            Fabric.with([Digits.self, Answers.self])
-
+          
         return true
     }
 

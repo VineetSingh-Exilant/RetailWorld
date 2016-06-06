@@ -7,21 +7,37 @@
 //
 
 import UIKit
-
+protocol SideBarViewControllerDelegate: class {
+    func acceptData(data:Int?)
+}
 class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    weak var delegate:SideBarViewControllerDelegate?
+    var data:Int?
     @IBOutlet var customView: UIView!
+<<<<<<< Updated upstream
+=======
+    var offer:OfferViewController!
+    
+    
+>>>>>>> Stashed changes
     @IBOutlet weak var tableView: UITableView!
     
     var categoryArray = NSMutableArray()
+<<<<<<< Updated upstream
     var gadgetsyArray = NSMutableArray()
     var offer = OfferViewController()
+=======
+>>>>>>> Stashed changes
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Welcome To Retail World"
          categoryArray = ["Food", "Beauty & Care", "Stationery", "Fruits & Vegetables"]
+<<<<<<< Updated upstream
          gadgetsyArray = ["iPhone", "MacBook Pro", "Mac Mini", "iMac"]
 
+=======
+        
+>>>>>>> Stashed changes
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,7 +95,28 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+<<<<<<< Updated upstream
         self.revealViewController().rightRevealToggleAnimated(true)
+=======
+        let selectedRow = indexPath.row
+        if offer == nil{
+        
+            offer = self.storyboard?.instantiateViewControllerWithIdentifier("offer") as! OfferViewController
+            self.delegate = offer
+        }
+        self.delegate?.acceptData(selectedRow)
+//        switch selectedRow {
+//        case 0:
+//            let foodController = self.storyboard?.instantiateViewControllerWithIdentifier("Food") as? FoodViewController
+//            self.presentViewController(foodController!, animated:true, completion:nil)
+//            self.offerView.view.addSubview((foodController?.view!)!)
+//            self.tableView.addSubview(customView)
+//            self.revealViewController().rightRevealToggleAnimated(true)
+//            print("case 1")
+//        default:
+//            print("Default Case")
+//        }
+>>>>>>> Stashed changes
     }
     
 }
