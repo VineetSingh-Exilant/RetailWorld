@@ -12,7 +12,7 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var itemsArray = [FoodItems]()
     var cartObjects = [FoodItems]()
     var cartSelectedRow:Int?
-     var fileIdDict = NSDictionary()
+     var fileIdArray = NSMutableArray()
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,42 +110,28 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print("cart Button Tapped")
         if let _ = cartSelectedRow{
         let foodSelected = cartObjects[cartSelectedRow!]
+        let customObject = QBCOCustomObject()
+        customObject.className = "cart"
+        customObject.fields?.setValue(foodSelected.fileId, forKey: "FileID")
+        customObject.fields?.setValue(foodSelected.name, forKey: "Name")
+        customObject.fields?.setValue(foodSelected.quantity, forKey: "Quantity")
+        customObject.fields?.setValue(foodSelected.price, forKey: "Price")
+            if !(fileIdArray.containsObject(isEqual(foodSelected.fileId))){
+        QBRequest.createObject(customObject, successBlock: { (_, _) in
             
-            let request = NSMutableDictionary()
-            request.setValue(foodSelected.fileId!, forKey:"FileID" )
+            print("Succesfully created object")
+            self.fileIdArray.addObject(foodSelected.fileId!)
             
-            QBRequest.objectsWithClassName("cart", extendedRequest: request, successBlock: { (_, objects, _) in
+            }) { (_) in
                 
-                if objects?.count > 0{
-                    
-                    
-                   print("Already existing")
-                }else{
-                    
-                    let customObject = QBCOCustomObject()
-                    customObject.className = "cart"
-                    customObject.fields?.setValue(foodSelected.fileId, forKey: "FileID")
-                    customObject.fields?.setValue(foodSelected.name, forKey: "Name")
-                    customObject.fields?.setValue(foodSelected.quantity, forKey: "Quantity")
-                    customObject.fields?.setValue(foodSelected.price, forKey: "Price")
-                    
-                    QBRequest.createObject(customObject, successBlock: { (_, _) in
-                        
-                        print("Succesfully created object")
-                        
-                        
-                    }) { (_) in
-                        
-                        print("error occured")
-                        
-                    }
-                }
+                print("error occured")
                 
-            }, errorBlock: { (_) in
-                    
-                    print("Some error when checking fileid")
-            })
-            
+        }
+            }
+        
+
+        
+        
         }
 }
 }
