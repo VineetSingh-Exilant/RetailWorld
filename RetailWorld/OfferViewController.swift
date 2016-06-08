@@ -19,11 +19,23 @@ class OfferViewController: UIViewController {
         self.openSideBar.target = self.revealViewController()
         self.openSideBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        Constants.tabCtrl = self.tabBarController!
         
-    }
+}
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        var ctrls =  Constants.tabCtrl.viewControllers! as [ UIViewController]
+        if ctrls.count > 4
+        {
+            
+            //Constants.tabCtrl.tabBar.items![0].title = nil
+            //Constants.tabCtrl.tabBar.items?.removeFirst()
+            ctrls.removeAtIndex(0)
+            self.tabBarController?.setViewControllers(ctrls, animated: true)
+           
+        }
         
     }
 

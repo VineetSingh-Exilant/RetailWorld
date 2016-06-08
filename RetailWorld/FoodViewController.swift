@@ -12,11 +12,20 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var itemsArray = [FoodItems]()
     var cartObjects = [FoodItems]()
     var cartSelectedRow:Int?
+    var favoritesSelectedRow:Int?
+    var favObjects = [FoodItems]()
      var fileIdArray = NSMutableArray()
+     var fileIDFavArray = NSMutableArray()
     @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet weak var openSideBar: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        _ = self.revealViewController
+        self.openSideBar.target = self.revealViewController()
+        self.openSideBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.tabBarItem = UITabBarItem(title: "Food", image: nil, selectedImage: nil)
         QBRequest.objectsWithClassName("Food", successBlock: { (_, items) in
             for item in items!{
                 let foodObject = item as! QBCOCustomObject
@@ -134,4 +143,28 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         }
 }
+    @IBAction func favoritesButtonTapped(sender: AnyObject)
+    {
+        if let _ = favoritesSelectedRow{
+            let favoritesSelected = favObjects[favoritesSelectedRow!]
+            let customObject = QBCOCustomObject()
+            customObject.className = "Favorites"
+            customObject.fields?.setValue(favoritesSelected.fileId, forKey: "FileID")
+            customObject.fields?.setValue(favoritesSelected.name, forKey: "Name")
+            customObject.fields?.setValue(favoritesSelected.quantity, forKey: "Quantity")
+            customObject.fields?.setValue(favoritesSelected.price, forKey: "Price")
+            if !(fileIDFavArray.containsObject(isEqual(favoritesSelected.fileId))){
+                QBRequest.createObject(customObject, successBlock: { (_, _) in
+                    
+                    print("Succesfully created object")
+                    self.fileIDFavArray.addObject(favoritesSelected.fileId!)
+                    
+                }) { (_) in
+                    
+                    print("error occured")
+                    
+                }
+            }
+        }
+    }
 }

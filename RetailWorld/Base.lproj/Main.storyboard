@@ -198,7 +198,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="Cell" rowHeight="215" id="IPt-z0-Heq" customClass="FoodTableViewCell" customModule="RetailWorld" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="215"/>
+                                        <rect key="frame" x="0.0" y="92" width="414" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IPt-z0-Heq" id="x9h-gt-78i">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
@@ -279,7 +279,7 @@
                                     <outlet property="delegate" destination="tpx-ej-oEO" id="y0e-EE-QKt"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epr-hG-nRq">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epr-hG-nRq">
                                 <rect key="frame" x="5" y="20" width="33" height="30"/>
                                 <state key="normal" backgroundImage="backButton.png"/>
                                 <connections>
@@ -293,9 +293,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZlJ-e0-KoV"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZlJ-e0-KoV">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="KFE-Xq-757"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="openSideBar" destination="KFE-Xq-757" id="qFO-ah-7zh"/>
                         <outlet property="searchDisplayController" destination="3wq-QV-QFZ" id="4b9-QB-8kU"/>
                         <outlet property="tableView" destination="2vc-WK-VVa" id="SpG-ZB-dQE"/>
                     </connections>
@@ -310,7 +315,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="678" y="-1238"/>
+            <point key="canvasLocation" x="1217" y="-1383"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QnT-Z1-Vgv">
@@ -574,7 +579,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTf-bH-vdj">
                                                     <rect key="frame" x="333" y="75" width="48" height="35"/>
-                                                    <state key="normal" image="6BC4E913-345C-45B8-9311-22B590458B3E"/>
+                                                    <state key="normal" image="F43A50DB-09CB-4967-B0F1-9DC5816E37CA"/>
                                                     <connections>
                                                         <action selector="cartButtonTapped:" destination="tpx-ej-oEO" eventType="touchUpInside" id="8nh-wM-GE3"/>
                                                     </connections>
@@ -928,9 +933,27 @@
             </objects>
             <point key="canvasLocation" x="-1686" y="123"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nNI-Sx-GiQ">
+            <objects>
+                <navigationController storyboardIdentifier="NavFood" automaticallyAdjustsScrollViewInsets="NO" id="IcE-i3-c3k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wXg-3X-0XA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tpx-ej-oEO" kind="relationship" relationship="rootViewController" id="5pk-H2-BHr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSg-eI-d3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="-1327"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="6BC4E913-345C-45B8-9311-22B590458B3E" width="35" height="35">
+        <image name="F43A50DB-09CB-4967-B0F1-9DC5816E37CA" width="35" height="35">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1073,8 +1096,8 @@ AB0rA
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6cl-fF-HDb"/>
-        <segue reference="Rnm-Mk-uKN"/>
         <segue reference="f8t-aZ-xMJ"/>
+        <segue reference="Rnm-Mk-uKN"/>
         <segue reference="0Pt-bz-s5R"/>
     </inferredMetricsTieBreakers>
 </document>

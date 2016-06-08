@@ -12,10 +12,12 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     @IBOutlet var customView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    
+    var offer = OfferViewController()
     var categoryArray = NSMutableArray()
     var gadgetsyArray = NSMutableArray()
-    var offer = OfferViewController()
+   
+    
+    var selectedSection:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Welcome To Retail World"
@@ -34,6 +36,8 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+       
        if section == 0
         {
           return categoryArray.count
@@ -63,11 +67,14 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var str = ""
         if section == 0
         {
-            str = "Kitchen"
+            str = "Grocery"
         }
-        else
+        else if section == 1
         {
             str = "Electronics"
+        }else
+        {
+            print("other case")
         }
         return str
     }
@@ -79,9 +86,42 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+      
+      
+        let food = storyboard?.instantiateViewControllerWithIdentifier("NavFood") as? UINavigationController
+       var ctrls =  Constants.tabCtrl.viewControllers! as [ UIViewController]
+       var FirstCtrl =  ctrls[0]
+       FirstCtrl = food!
+        //ctrls.removeFirst()
+        
+        ctrls.insert(FirstCtrl, atIndex: 0)
+        Constants.tabCtrl.viewControllers = ctrls
+        Constants.tabCtrl.tabBar.items![0].title = "Food"
+        Constants.tabCtrl.selectedIndex = 0
         self.revealViewController().rightRevealToggleAnimated(true)
-                
+        
+       
+
+       /* self.revealViewController().rightRevealToggleAnimated(true)
+        tableView.reloadData()
+        let selecteRow = indexPath.row
+        if indexPath.section == 0{
+        switch selecteRow {
+        case 0:
+            let food = storyboard?.instantiateViewControllerWithIdentifier("Food") as? FoodViewController
+            self.presentViewController(food!, animated: true, completion: nil)
+        default:
+            print("Default Case")
+        }
+            
+        }*/
+        
     }
     
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        
+    }
     
 }

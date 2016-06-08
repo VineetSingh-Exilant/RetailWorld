@@ -17,6 +17,8 @@ class FavoritesViewController: UIViewController {
         self.sideBar.target = self.revealViewController()
         self.sideBar.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        Constants.tabCtrl = self.tabBarController!
+
     }
 
     override func didReceiveMemoryWarning() {
