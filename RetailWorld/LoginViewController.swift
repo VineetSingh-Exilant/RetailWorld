@@ -51,30 +51,33 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
 
-    @IBAction func submit(sender: AnyObject)
+    @IBAction func submitt(sender: AnyObject)
     {
-       let bounds = self.loginButton.bounds
-       UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-       self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
-       self.loginButton.enabled = false
-        }, completion: nil)
-        
-       QBRequest.logInWithUserLogin(self.email.text!, password: self.password.text!, successBlock: { (_, user) in
-                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-       let revealController = storyBoard.instantiateViewControllerWithIdentifier("Reveal") as! SWRevealViewController
-               self.presentViewController(revealController, animated:true, completion:nil)
-                }) { (_) in
+       
+            let bounds = self.loginButton.bounds
+            UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
+                self.loginButton.enabled = false
+                }, completion: nil)
+            
+            QBRequest.logInWithUserLogin(self.email.text!, password: self.password.text!, successBlock: { (_, user) in
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let revealController = storyBoard.instantiateViewControllerWithIdentifier("Reveal") as! SWRevealViewController
+                self.presentViewController(revealController, animated:true, completion:nil)
+            }) { (_) in
             }
-        
-       if email.text?.characters.count == 0 || password.text?.characters.count == 0
-       {
-            LoginAlerts.showAlertWithMessage("Login Failed", message: "Please provide correct details", controller: self)
-            loginButton.enabled = true
-       }
-    }
-    
-    
-    
-    
+            
+            if self.email.text?.characters.count == 0 || self.password.text?.characters.count == 0
+            {
+                LoginAlerts.showAlertWithMessage("Login Failed", message: "Please provide correct details", controller: self)
+                self.loginButton.enabled = true
+            }
+        }
     
 }
+
+    
+    
+    
+    
+    
