@@ -9,7 +9,6 @@
 import UIKit
 import Quickblox
 import Fabric
-import Answers
 import DigitsKit
 
 
@@ -25,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            QBSettings.setAuthKey("kqw5t-9ThKhDfHZ")
            QBSettings.setAuthSecret("zRMjEyx7KQKdV3q")
            QBSettings.setAccountKey("P2VM31UfLyZAnxqZEwrx")
-           Fabric.with([Digits.self])
-           Fabric.with([Digits.self, Answers.self])
+          // Fabric.with([Digits.self])
 
         return true
     }
