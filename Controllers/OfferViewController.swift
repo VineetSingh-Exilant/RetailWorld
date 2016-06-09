@@ -28,7 +28,7 @@ class OfferViewController: UIViewController,UICollectionViewDelegate {
         
         imageArray = ["image1.jpeg","image2.jpeg","image3.jpeg","image4.jpeg","image5.jpeg","image6.jpeg","image7","image8","image9"]
         
-        productNameArray = ["Novels","Electronics","Clothing","Kitchen","Accessories","Novels","Clothing","Electronics","Kitchen"]
+         productNameArray = ["Novels","Accessories","Clothing","Clothing","Novels","Accessories","Novels","Accessories","Kitchen"]
         
         discountArray = ["Discount 10%","Discount 23%","Discount 5%","Discount 45%","Discount 33%","Discount 49%","Discount 2%","Discount 9%","Discount 70%"]
         
@@ -60,7 +60,7 @@ class OfferViewController: UIViewController,UICollectionViewDelegate {
     }
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
     {
-        return 1
+        return 2
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
@@ -71,7 +71,7 @@ class OfferViewController: UIViewController,UICollectionViewDelegate {
     {
         let identifier:String = "Cell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! OfferCollectionViewCell
-        cell.productName.text = ""
+        cell.productName.text = productNameArray?.objectAtIndex(indexPath.row) as? String
         cell.discountsOnProducts.text = discountArray?.objectAtIndex(indexPath.row) as? String
         discountArray?.objectAtIndex(indexPath.row) as? String
         
@@ -84,6 +84,21 @@ class OfferViewController: UIViewController,UICollectionViewDelegate {
         
     }
 
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        self.title = "Deals Of The Day."
+        
+        switch kind {
+            
+        case UICollectionElementKindSectionHeader:
+            
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath)
+            //headerView.backgroundColor = UIColor.clearColor();
+            return headerView
+            
+        default:
+            assert(false, "Unexpected element kind")
+        }
+    }
 
 }
 
