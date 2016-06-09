@@ -81,6 +81,7 @@
 		8016361A1D094CE600403835 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801636161D094CE600403835 /* DigitsKit.framework */; };
 		8016361B1D094CE600403835 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 801636171D094CE600403835 /* DigitsKitResources.bundle */; };
 		8016361C1D094CE600403835 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801636181D094CE600403835 /* TwitterCore.framework */; };
+		8016361F1D09740D00403835 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016361E1D09740D00403835 /* Utility.swift */; };
 		8033FAB11CEC9491000948E2 /* RetailWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +172,7 @@
 		801636161D094CE600403835 /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = SOURCE_ROOT; };
 		801636171D094CE600403835 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		801636181D094CE600403835 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
+		8016361E1D09740D00403835 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = HelperObjects/Utility.swift; sourceTree = "<group>"; };
 		8033FA981CEC9491000948E2 /* RetailWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033FAAC1CEC9491000948E2 /* RetailWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailWorldTests.swift; sourceTree = "<group>"; };
@@ -351,9 +353,18 @@
 			path = RetailWorld;
 			sourceTree = "<group>";
 		};
+		8016361D1D09739F00403835 /* HelperObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8016361E1D09740D00403835 /* Utility.swift */,
+			);
+			name = HelperObjects;
+			sourceTree = "<group>";
+		};
 		8033FA8F1CEC9491000948E2 = {
 			isa = PBXGroup;
 			children = (
+				8016361D1D09739F00403835 /* HelperObjects */,
 				801635CA1D09468400403835 /* RetailWorld */,
 				8016359F1D0941FD00403835 /* Frameworks */,
 				8016352F1D09411100403835 /* Controllers */,
@@ -565,6 +576,7 @@
 				8016356B1D09411100403835 /* AccountViewController.swift in Sources */,
 				8016359D1D09411100403835 /* FoodItems.swift in Sources */,
 				8016359B1D09411100403835 /* SWRevealViewController.m in Sources */,
+				8016361F1D09740D00403835 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

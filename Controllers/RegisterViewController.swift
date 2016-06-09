@@ -39,9 +39,17 @@ class RegisterViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
             let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
             alert.addAction(cancelAction)
+        }
+            else if !isValidEmail(emailID.text!)
+            {
+                let alert = UIAlertController(title: "Email", message: "Wrong Email.", preferredStyle: .Alert)
+                self.presentViewController(alert, animated: true, completion: nil)
+                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+                alert.addAction(cancelAction)
+            }
             
             
-        }else{
+        else{
             
             let digits = Digits.sharedInstance()
             digits.logOut()
@@ -110,5 +118,11 @@ class RegisterViewController: UIViewController {
             
         }
     }
+    func isValidEmail(testStr:String) -> Bool {
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
 }
-
+}
