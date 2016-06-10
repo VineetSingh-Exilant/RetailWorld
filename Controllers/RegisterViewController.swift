@@ -18,10 +18,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailID: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailID.attributedPlaceholder = NSAttributedString(string:"Enter EmailID",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
-        password.attributedPlaceholder = NSAttributedString(string:"Enter Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
-        mobileNo.attributedPlaceholder = NSAttributedString(string:"Enter Mobile No.",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
-        confirmPassword.attributedPlaceholder = NSAttributedString(string:"Confirm Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        emailID.attributedPlaceholder = NSAttributedString(string:"Enter EmailID",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
+        password.attributedPlaceholder = NSAttributedString(string:"Enter Password",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
+        mobileNo.attributedPlaceholder = NSAttributedString(string:"Enter Mobile No.",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
+        confirmPassword.attributedPlaceholder = NSAttributedString(string:"Confirm Password",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,6 +30,10 @@ class RegisterViewController: UIViewController {
     }
     
     
+    @IBAction func dismissBtn(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBAction func register(sender: AnyObject)
     {

@@ -15,7 +15,8 @@ class ResetPasswordViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        emailID.attributedPlaceholder = NSAttributedString(string:"you@domain.com",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        self.hideKeyboardWhenTappedAround()
+        emailID.attributedPlaceholder = NSAttributedString(string:"you@domain.com",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
       
     }
 
@@ -41,4 +42,9 @@ class ResetPasswordViewController: UIViewController {
         }
     }
     
+    @IBAction func dismissBtn(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 }

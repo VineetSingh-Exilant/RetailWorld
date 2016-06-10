@@ -18,20 +18,24 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         email.attributedPlaceholder = NSAttributedString(string:"Enter your Mobile No.",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         password.attributedPlaceholder = NSAttributedString(string:"Password",attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
+       
         
     }
     
     func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -225
+       self.view.frame.origin.y = -225
+        
     }
     
     func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0
+        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -73,7 +77,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 self.loginButton.enabled = true
             }
         }
-    
+
+
 }
 
     

@@ -83,6 +83,9 @@
 		8016361C1D094CE600403835 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801636181D094CE600403835 /* TwitterCore.framework */; };
 		8016361F1D09740D00403835 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016361E1D09740D00403835 /* Utility.swift */; };
 		8033FAB11CEC9491000948E2 /* RetailWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */; };
+		80C7B4951D0A852B002EB678 /* AddToCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C7B4921D0A852B002EB678 /* AddToCart.png */; };
+		80C7B4961D0A852B002EB678 /* CartSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C7B4931D0A852B002EB678 /* CartSymbol.png */; };
+		80C7B4971D0A852B002EB678 /* Qty.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C7B4941D0A852B002EB678 /* Qty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +180,9 @@
 		8033FAAC1CEC9491000948E2 /* RetailWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailWorldTests.swift; sourceTree = "<group>"; };
 		8033FAB21CEC9491000948E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80C7B4921D0A852B002EB678 /* AddToCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddToCart.png; sourceTree = "<group>"; };
+		80C7B4931D0A852B002EB678 /* CartSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CartSymbol.png; sourceTree = "<group>"; };
+		80C7B4941D0A852B002EB678 /* Qty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Qty.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,13 +267,16 @@
 				8016354E1D09411100403835 /* image11 */,
 				8016354F1D09411100403835 /* image2.jpeg */,
 				801635501D09411100403835 /* image3.jpeg */,
+				80C7B4921D0A852B002EB678 /* AddToCart.png */,
+				80C7B4931D0A852B002EB678 /* CartSymbol.png */,
+				80C7B4941D0A852B002EB678 /* Qty.png */,
 				801635511D09411100403835 /* image4.jpeg */,
 				801635521D09411100403835 /* image5 */,
 				801635531D09411100403835 /* image5.jpeg */,
 				801635541D09411100403835 /* image6 */,
 				801635551D09411100403835 /* image6.jpeg */,
-				801635561D09411100403835 /* image7 */,
 				801635571D09411100403835 /* image8 */,
+				801635561D09411100403835 /* image7 */,
 				801635581D09411100403835 /* image9 */,
 				801635591D09411100403835 /* images.jpeg */,
 				8016355A1D09411100403835 /* images10.jpeg */,
@@ -497,6 +506,7 @@
 				8016358D1D09411100403835 /* image6.jpeg in Resources */,
 				801635891D09411100403835 /* image4.jpeg in Resources */,
 				801636061D09478A00403835 /* Info.plist in Resources */,
+				80C7B4971D0A852B002EB678 /* Qty.png in Resources */,
 				801635931D09411100403835 /* Launch.png in Resources */,
 				801635941D09411100403835 /* login.png in Resources */,
 				8016361B1D094CE600403835 /* DigitsKitResources.bundle in Resources */,
@@ -505,6 +515,7 @@
 				801635871D09411100403835 /* image2.jpeg in Resources */,
 				801636111D09492600403835 /* Main.storyboard in Resources */,
 				801635841D09411100403835 /* image1.jpeg in Resources */,
+				80C7B4961D0A852B002EB678 /* CartSymbol.png in Resources */,
 				801635831D09411100403835 /* favorites.png in Resources */,
 				8016357C1D09411100403835 /* backButton.png in Resources */,
 				801635921D09411100403835 /* images10.jpeg in Resources */,
@@ -513,6 +524,7 @@
 				8016358E1D09411100403835 /* image7 in Resources */,
 				801635881D09411100403835 /* image3.jpeg in Resources */,
 				8016358C1D09411100403835 /* image6 in Resources */,
+				80C7B4951D0A852B002EB678 /* AddToCart.png in Resources */,
 				801635961D09411100403835 /* photo-frame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

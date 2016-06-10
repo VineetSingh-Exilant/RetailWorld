@@ -85,7 +85,7 @@ class OfferViewController: UIViewController,UICollectionViewDelegate {
     }
 
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        self.title = "Deals Of The Day."
+        //self.title = "Deals Of The Day."
         
         switch kind {
             
