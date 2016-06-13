@@ -85,10 +85,10 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
     return cell
     }
-    @IBAction func backAction(sender: AnyObject)
-    {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+//    @IBAction func backAction(sender: AnyObject)
+//    {
+//        self.dismissViewControllerAnimated(true, completion: nil)
+//    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return itemsArray.count
@@ -106,6 +106,8 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         cartObjects.append(itemsArray[indexPath.row])
         cartSelectedRow = indexPath.row
+        favoritesSelectedRow = indexPath.row
+        favObjects.append(itemsArray[indexPath.row])
 
     }
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
@@ -117,32 +119,31 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBAction func cartButtonTapped(sender: AnyObject)
     {
         print("cart Button Tapped")
+        
         if let _ = cartSelectedRow{
-        let foodSelected = cartObjects[cartSelectedRow!]
-        let customObject = QBCOCustomObject()
-        customObject.className = "cart"
-        customObject.fields?.setValue(foodSelected.fileId, forKey: "FileID")
-        customObject.fields?.setValue(foodSelected.name, forKey: "Name")
-        customObject.fields?.setValue(foodSelected.quantity, forKey: "Quantity")
-        customObject.fields?.setValue(foodSelected.price, forKey: "Price")
-            if !(fileIdArray.containsObject(isEqual(foodSelected.fileId))){
-        QBRequest.createObject(customObject, successBlock: { (_, _) in
-            
-            print("Succesfully created object")
-            self.fileIdArray.addObject(foodSelected.fileId!)
-            
-            }) { (_) in
-                
-                print("error occured")
-                
-        }
+            let foodSelected = cartObjects[cartSelectedRow!]
+            let customObject = QBCOCustomObject()
+            customObject.className = "cart"
+            customObject.fields?.setValue(foodSelected.fileId, forKey: "FileID")
+            customObject.fields?.setValue(foodSelected.name, forKey: "Name")
+            customObject.fields?.setValue(foodSelected.quantity, forKey: "Quantity")
+            customObject.fields?.setValue(foodSelected.price, forKey: "Price")
+            if !fileIdArray.containsObject(foodSelected.fileId!)
+            {
+                QBRequest.createObject(customObject, successBlock: { (_, _) in
+                    print("Succesfully created object")
+                    self.fileIdArray.addObject(foodSelected.fileId!)
+                    
+                }) { (_) in
+                    print("error occured")
+                    
+                }
             }
-        
-
-        
-        
         }
-}
+        
+        
+    }
+
     @IBAction func favoritesButtonTapped(sender: AnyObject)
     {
         if let _ = favoritesSelectedRow{
