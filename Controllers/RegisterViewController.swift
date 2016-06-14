@@ -96,7 +96,7 @@ class RegisterViewController: UIViewController {
                         print("Error Occur")
                     }
                     
-                    
+            
                     
                 }else{
                     
@@ -104,7 +104,7 @@ class RegisterViewController: UIViewController {
                 }
                 
             })
-            
+    
             
             
             //            let user = QBUUser()
