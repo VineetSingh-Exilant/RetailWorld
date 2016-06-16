@@ -146,6 +146,7 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBAction func favoritesButtonTapped(sender: AnyObject)
     {
+        print("favoritesButtonTapped")
         if let _ = favoritesSelectedRow{
             let favoritesSelected = favObjects[favoritesSelectedRow!]
             let customObject = QBCOCustomObject()
@@ -167,5 +168,11 @@ class FoodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 }
             }
         }
+    }
+    
+    @IBAction func confirmBtnTapped(sender:AnyObject)
+    {
+       print("confirmBtnTapped")
+       
     }
 }

@@ -18,6 +18,7 @@ extension UIViewController {
     }
 }
 
+@available(iOS 8.0, *)
 var alert:UIAlertController?
 func isValidEmail(testStr:String) -> Bool {
     

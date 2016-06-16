@@ -8,8 +8,8 @@
 
 import UIKit
 import Quickblox
-import Fabric
-import DigitsKit
+//import Fabric
+//import DigitsKit
 
 
 @UIApplicationMain
@@ -49,6 +49,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        let deviceIdentifier = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        let subscription = QBMSubscription()
+        subscription.deviceUDID = deviceIdentifier
+        subscription.deviceToken = deviceToken
+        subscription.notificationChannel = QBMNotificationChannel.init(1)
+        QBRequest.createSubscription(subscription, successBlock: { (_, _) in
+            
+            
+        }) { (_) in
+        }
+        
     }
 
 

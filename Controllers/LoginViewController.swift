@@ -8,7 +8,7 @@
 
 import UIKit
 import QuickLook
-import DigitsKit
+//import DigitsKit
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
     
@@ -65,6 +65,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 }, completion: nil)
             
             QBRequest.logInWithUserLogin(self.email.text!, password: self.password.text!, successBlock: { (_, user) in
+                
+                if self.email.text == "7676842585"{
+                    
+                    self.registerForAPNS()
+                }
+                
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let revealController = storyBoard.instantiateViewControllerWithIdentifier("Reveal") as! SWRevealViewController
                 self.presentViewController(revealController, animated:true, completion:nil)
@@ -77,12 +83,30 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 self.loginButton.enabled = true
             }
         }
+    func registerForAPNS()
+    {
+        
+        let application = UIApplication.sharedApplication()
+        
+        if #available(iOS 8.0, *) {
+            let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+            let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+            
+            application.registerUserNotificationSettings(pushNotificationSettings)
+            application.registerForRemoteNotifications()
+        }else{
+            
+            let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
+            application.registerForRemoteNotificationTypes(types)
+        }
+        
+    }
 
 
 }
 
-    
-    
-    
-    
-    
+
+
+
+
+

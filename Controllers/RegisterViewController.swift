@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DigitsKit
+//import DigitsKit
 
 class RegisterViewController: UIViewController {
     
@@ -39,18 +39,30 @@ class RegisterViewController: UIViewController {
     {
         if password.text! != confirmPassword.text!
         {
-            let alert = UIAlertController(title: "Password", message: "Password MisMatch", preferredStyle: .Alert)
-            self.presentViewController(alert, animated: true, completion: nil)
-            let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
-            alert.addAction(cancelAction)
+            if #available(iOS 8.0, *) {
+                let alert = UIAlertController(title: "Password", message: "Password MisMatch", preferredStyle: .Alert)
+                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+                alert.addAction(cancelAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+               
+            } else {
+                // Fallback on earlier versions
+            }
+           
         }
             else if !isValidEmail(emailID.text!)
             {
-                let alert = UIAlertController(title: "Email", message: "Wrong Email.", preferredStyle: .Alert)
-                self.presentViewController(alert, animated: true, completion: nil)
+            if #available(iOS 8.0, *) {
+            let alert = UIAlertController(title: "Email", message: "Wrong Email.", preferredStyle: .Alert)
                 let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
                 alert.addAction(cancelAction)
-               
+                self.presentViewController(alert, animated: true, completion: nil)
+
+                
+                } else {
+                    // Fallback on earlier versions
+                }
+                
                
             }else if !isvalidateMobile(mobileNo.text!)
         {
@@ -58,7 +70,7 @@ class RegisterViewController: UIViewController {
         }
             
             
-        else{
+        /*else{
             
             let digits = Digits.sharedInstance()
             digits.logOut()
@@ -125,6 +137,6 @@ class RegisterViewController: UIViewController {
             //            print("Error Occur")
             //            }
             
-        }
+        }*/
     }
 }

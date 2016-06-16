@@ -31,10 +31,16 @@ class ResetPasswordViewController: UIViewController {
         let emailString = emailID.text!
         QBRequest.resetUserPasswordWithEmail(emailString, successBlock: { (_) in
             print("Password Change")
-            let alert = UIAlertController(title: "Reset Password", message: "Reset Password link is send to your email id", preferredStyle: .Alert)
-            self.presentViewController(alert, animated: true, completion: nil)
-            let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
-            alert.addAction(cancelAction)
+           
+            if #available(iOS 8.0, *) {
+                let alert = UIAlertController(title: "Reset Password", message: "Reset Password link is send to your email id", preferredStyle: .Alert)
+                self.presentViewController(alert, animated: true, completion: nil)
+                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+                 alert.addAction(cancelAction)
+            } else {
+                // Fallback on earlier versions
+            }
+           
             
             
         }) { (_) in

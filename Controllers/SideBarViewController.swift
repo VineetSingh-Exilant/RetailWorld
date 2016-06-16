@@ -15,9 +15,7 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     var offer = OfferViewController()
     var categoryArray = NSMutableArray()
     var gadgetsyArray = NSMutableArray()
-   
-    
-    var selectedSection:Int?
+    var isSelected:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Welcome To Retail World"
@@ -91,19 +89,22 @@ class SideBarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
       
-      
+        if indexPath.section == 0{
+        if (indexPath.row == 0 && isSelected == false)
+        {
+        isSelected = true
         let food = storyboard?.instantiateViewControllerWithIdentifier("NavFood") as? UINavigationController
-       var ctrls =  Constants.tabCtrl.viewControllers! as [ UIViewController]
-       var FirstCtrl =  ctrls[0]
-       FirstCtrl = food!
+        var ctrls =  Constants.tabCtrl.viewControllers! as [ UIViewController]
+        var FirstCtrl =  ctrls[0]
+        FirstCtrl = food!
         //ctrls.removeFirst()
-        
         ctrls.insert(FirstCtrl, atIndex: 0)
         Constants.tabCtrl.viewControllers = ctrls
         Constants.tabCtrl.tabBar.items![0].title = "Food"
         Constants.tabCtrl.selectedIndex = 0
         self.revealViewController().rightRevealToggleAnimated(true)
-        
+            }
+        }
        
 
        /* self.revealViewController().rightRevealToggleAnimated(true)
