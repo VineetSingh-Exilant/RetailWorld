@@ -8,8 +8,8 @@
 
 import UIKit
 import Quickblox
-//import Fabric
-//import DigitsKit
+import Fabric
+import DigitsKit
 
 
 @UIApplicationMain
@@ -52,16 +52,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         
+        print("device token came")
+        
         let deviceIdentifier = UIDevice.currentDevice().identifierForVendor?.UUIDString
         let subscription = QBMSubscription()
         subscription.deviceUDID = deviceIdentifier
         subscription.deviceToken = deviceToken
         subscription.notificationChannel = QBMNotificationChannel.init(1)
         QBRequest.createSubscription(subscription, successBlock: { (_, _) in
+            print("saved")
             
+        }) { (err) in
             
-        }) { (_) in
+            print(err)
         }
+        
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError)
+    {
+         print("device token error \(error.localizedDescription)")
         
     }
 

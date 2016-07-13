@@ -65,27 +65,33 @@
 		801635B31D09428F00403835 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635B21D09428F00403835 /* CoreGraphics.framework */; };
 		801635B51D09429C00403835 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635B41D09429C00403835 /* MobileCoreServices.framework */; };
 		801635B71D0942A500403835 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635B61D0942A500403835 /* SystemConfiguration.framework */; };
-		801635B91D0942AD00403835 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635B81D0942AD00403835 /* CFNetwork.framework */; };
+		801635B91D0942AD00403835 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635B81D0942AD00403835 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		801635BB1D0942C300403835 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635BA1D0942C300403835 /* libxml2.2.tbd */; };
 		801635BD1D0942D000403835 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635BC1D0942D000403835 /* libresolv.9.tbd */; };
 		801635BF1D0942D900403835 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635BE1D0942D900403835 /* libz.1.1.3.tbd */; };
 		801635C21D09442D00403835 /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635C01D09442D00403835 /* Quickblox.framework */; };
-		801635C31D09442D00403835 /* QuickbloxWebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635C11D09442D00403835 /* QuickbloxWebRTC.framework */; };
+		801635C31D09442D00403835 /* QuickbloxWebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801635C11D09442D00403835 /* QuickbloxWebRTC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		801636061D09478A00403835 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 801636051D09478A00403835 /* Info.plist */; };
 		801636091D0947EA00403835 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801636081D0947EA00403835 /* GLKit.framework */; };
-		8016360B1D09481E00403835 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8016360A1D09481E00403835 /* VideoToolbox.framework */; };
+		8016360B1D09481E00403835 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8016360A1D09481E00403835 /* VideoToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		801636101D09492600403835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8016360C1D09492600403835 /* LaunchScreen.storyboard */; };
 		801636111D09492600403835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8016360E1D09492600403835 /* Main.storyboard */; };
 		801636131D094A2B00403835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801636121D094A2B00403835 /* AppDelegate.swift */; };
 		8016361F1D09740D00403835 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016361E1D09740D00403835 /* Utility.swift */; };
 		8033FAB11CEC9491000948E2 /* RetailWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */; };
+		807290211D253FE000F927AC /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807290201D253FE000F927AC /* AdminViewController.swift */; };
+		80B9702D1D1BAB1800264F12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B9702C1D1BAB1800264F12 /* Foundation.framework */; };
+		80B9702F1D1BABC300264F12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B9702E1D1BABC300264F12 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		80C5FC741D20F28F006ACA62 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5FC731D20F28F006ACA62 /* Parent.swift */; };
 		80C7B4951D0A852B002EB678 /* AddToCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C7B4921D0A852B002EB678 /* AddToCart.png */; };
 		80C7B4961D0A852B002EB678 /* CartSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C7B4931D0A852B002EB678 /* CartSymbol.png */; };
 		80C7B4971D0A852B002EB678 /* Qty.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C7B4941D0A852B002EB678 /* Qty.png */; };
-		80CC30E41D1025BD001ACC53 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC30E01D1025BD001ACC53 /* Fabric.framework */; };
-		80CC30E51D1025BD001ACC53 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC30E11D1025BD001ACC53 /* DigitsKit.framework */; };
+		80CC30E41D1025BD001ACC53 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC30E01D1025BD001ACC53 /* Fabric.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		80CC30E51D1025BD001ACC53 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC30E11D1025BD001ACC53 /* DigitsKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		80CC30E61D1025BD001ACC53 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80CC30E21D1025BD001ACC53 /* DigitsKitResources.bundle */; };
-		80CC30E71D1025BD001ACC53 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC30E31D1025BD001ACC53 /* TwitterCore.framework */; };
+		80CC30E71D1025BD001ACC53 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CC30E31D1025BD001ACC53 /* TwitterCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		80EFC0A81D2B879A00F94CE6 /* AdminItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFC0A71D2B879A00F94CE6 /* AdminItemsViewController.swift */; };
+		80EFC0AA1D2BA3A100F94CE6 /* defaultImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80EFC0A91D2BA3A100F94CE6 /* defaultImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +182,10 @@
 		8033FAAC1CEC9491000948E2 /* RetailWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8033FAB01CEC9491000948E2 /* RetailWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailWorldTests.swift; sourceTree = "<group>"; };
 		8033FAB21CEC9491000948E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807290201D253FE000F927AC /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		80B9702C1D1BAB1800264F12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80B9702E1D1BABC300264F12 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		80C5FC731D20F28F006ACA62 /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
 		80C7B4921D0A852B002EB678 /* AddToCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddToCart.png; sourceTree = "<group>"; };
 		80C7B4931D0A852B002EB678 /* CartSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CartSymbol.png; sourceTree = "<group>"; };
 		80C7B4941D0A852B002EB678 /* Qty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Qty.png; sourceTree = "<group>"; };
@@ -183,6 +193,8 @@
 		80CC30E11D1025BD001ACC53 /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = SOURCE_ROOT; };
 		80CC30E21D1025BD001ACC53 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		80CC30E31D1025BD001ACC53 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
+		80EFC0A71D2B879A00F94CE6 /* AdminItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminItemsViewController.swift; sourceTree = "<group>"; };
+		80EFC0A91D2BA3A100F94CE6 /* defaultImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +202,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B9702F1D1BABC300264F12 /* UIKit.framework in Frameworks */,
+				80B9702D1D1BAB1800264F12 /* Foundation.framework in Frameworks */,
 				8016360B1D09481E00403835 /* VideoToolbox.framework in Frameworks */,
 				801636091D0947EA00403835 /* GLKit.framework in Frameworks */,
 				801635C31D09442D00403835 /* QuickbloxWebRTC.framework in Frameworks */,
@@ -238,6 +252,8 @@
 				801635361D09411100403835 /* RegisterViewController.swift */,
 				801635371D09411100403835 /* ResetPasswordViewController.swift */,
 				801635381D09411100403835 /* SideBarViewController.swift */,
+				807290201D253FE000F927AC /* AdminViewController.swift */,
+				80EFC0A71D2B879A00F94CE6 /* AdminItemsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +270,7 @@
 		801635431D09411100403835 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				80EFC0A91D2BA3A100F94CE6 /* defaultImage.jpg */,
 				801635441D09411100403835 /* backButton.png */,
 				801635451D09411100403835 /* background2.png */,
 				801635461D09411100403835 /* Bg.png */,
@@ -315,6 +332,7 @@
 				801635681D09411100403835 /* Constant.swift */,
 				801635691D09411100403835 /* FoodItems.swift */,
 				8016356A1D09411100403835 /* LoginAlerts.swift */,
+				80C5FC731D20F28F006ACA62 /* Parent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +340,8 @@
 		8016359F1D0941FD00403835 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80B9702E1D1BABC300264F12 /* UIKit.framework */,
+				80B9702C1D1BAB1800264F12 /* Foundation.framework */,
 				80CC30E01D1025BD001ACC53 /* Fabric.framework */,
 				80CC30E11D1025BD001ACC53 /* DigitsKit.framework */,
 				80CC30E21D1025BD001ACC53 /* DigitsKitResources.bundle */,
@@ -456,6 +476,12 @@
 				TargetAttributes = {
 					8033FA971CEC9491000948E2 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 43L66PNJ7D;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8033FAAB1CEC9491000948E2 = {
 						CreatedOnToolsVersion = 7.3;
@@ -509,6 +535,7 @@
 				801636061D09478A00403835 /* Info.plist in Resources */,
 				80C7B4971D0A852B002EB678 /* Qty.png in Resources */,
 				801635931D09411100403835 /* Launch.png in Resources */,
+				80EFC0AA1D2BA3A100F94CE6 /* defaultImage.jpg in Resources */,
 				801635941D09411100403835 /* login.png in Resources */,
 				801635821D09411100403835 /* cart_remove.png in Resources */,
 				8016357D1D09411100403835 /* background2.png in Resources */,
@@ -583,6 +610,7 @@
 				8016359E1D09411100403835 /* LoginAlerts.swift in Sources */,
 				801635751D09411100403835 /* OfferCollectionViewCell.swift in Sources */,
 				801636131D094A2B00403835 /* AppDelegate.swift in Sources */,
+				807290211D253FE000F927AC /* AdminViewController.swift in Sources */,
 				8016356E1D09411100403835 /* FoodViewController.swift in Sources */,
 				801635741D09411100403835 /* FoodTableViewCell.swift in Sources */,
 				8016359C1D09411100403835 /* Constant.swift in Sources */,
@@ -591,6 +619,8 @@
 				8016359D1D09411100403835 /* FoodItems.swift in Sources */,
 				8016359B1D09411100403835 /* SWRevealViewController.m in Sources */,
 				8016361F1D09740D00403835 /* Utility.swift in Sources */,
+				80C5FC741D20F28F006ACA62 /* Parent.swift in Sources */,
+				80EFC0A81D2B879A00F94CE6 /* AdminItemsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +750,8 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RetailWorld/Framework",
@@ -729,15 +761,16 @@
 				);
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = RetailWorld/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-lxml2",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Exilant.RetailWorld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exilant.retailworld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RetailWorld/RetailWorld-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -749,6 +782,8 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RetailWorld/Framework",
@@ -758,15 +793,16 @@
 				);
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = RetailWorld/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-lxml2",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Exilant.RetailWorld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exilant.retailworld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RetailWorld/RetailWorld-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

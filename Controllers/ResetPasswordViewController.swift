@@ -17,6 +17,8 @@ class ResetPasswordViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         emailID.attributedPlaceholder = NSAttributedString(string:"you@domain.com",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ResetPasswordViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ResetPasswordViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
       
     }
 
@@ -25,7 +27,22 @@ class ResetPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func keyboardWillShow(sender: NSNotification) {
+        switch UIDevice.currentDevice().userInterfaceIdiom {
+        case .Phone:
+            self.view.frame.origin.y = -50
+        case .Pad:
+            self.view.frame.origin.y = -50
+        default:
+            print("unspecified")
+        }
+        
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0
+        
+    }
     @IBAction func submit(sender: AnyObject)
     {
         let emailString = emailID.text!

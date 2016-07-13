@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import DigitsKit
+import DigitsKit
 
 class RegisterViewController: UIViewController {
     
@@ -18,17 +18,34 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailID: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         emailID.attributedPlaceholder = NSAttributedString(string:"Enter EmailID",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
         password.attributedPlaceholder = NSAttributedString(string:"Enter Password",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
         mobileNo.attributedPlaceholder = NSAttributedString(string:"Enter Mobile No.",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
         confirmPassword.attributedPlaceholder = NSAttributedString(string:"Confirm Password",attributes:[NSForegroundColorAttributeName: UIColor.blackColor()])
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func keyboardWillShow(sender: NSNotification) {
+       
+        switch UIDevice.currentDevice().userInterfaceIdiom {
+        case .Phone:
+            self.view.frame.origin.y = -50
+        case .Pad:
+            self.view.frame.origin.y = -250
+        default:
+            print("unspecified")
+    }
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0
+        
+    }
     
     @IBAction func dismissBtn(sender: AnyObject)
     {
@@ -68,9 +85,8 @@ class RegisterViewController: UIViewController {
         {
             
         }
-            
-            
-        /*else{
+                      
+        else{
             
             let digits = Digits.sharedInstance()
             digits.logOut()
@@ -87,7 +103,6 @@ class RegisterViewController: UIViewController {
                 if err == nil{
                     print(ses)
                     print(ses.userID)
-                    
                     let user = QBUUser()
                     user.phone = self.mobileNo.text
                     user.password = self.password.text
@@ -102,7 +117,7 @@ class RegisterViewController: UIViewController {
                         let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
                         alert.addAction(cancelAction)
                         self.dismissViewControllerAnimated(true, completion: nil)
-                        
+         
                         })
                     { (errorResponse) -> Void in
                         print("Error Occur")
@@ -137,6 +152,6 @@ class RegisterViewController: UIViewController {
             //            print("Error Occur")
             //            }
             
-        }*/
+        }
     }
 }

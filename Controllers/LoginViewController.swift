@@ -8,7 +8,7 @@
 
 import UIKit
 import QuickLook
-//import DigitsKit
+import DigitsKit
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
     
@@ -28,8 +28,20 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
     }
     
-    func keyboardWillShow(sender: NSNotification) {
-       self.view.frame.origin.y = -225
+    func keyboardWillShow(sender: NSNotification)
+    {
+        switch UIDevice.currentDevice().userInterfaceIdiom {
+        case .Phone:
+        self.view.frame.origin.y = -200
+        case .Pad:
+        self.view.frame.origin.y = -250
+        default:
+            print("unspecified")
+            
+            
+           
+        }
+       
         
     }
     
@@ -60,18 +72,23 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
        
             let bounds = self.loginButton.bounds
             UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
+                self.loginButton.bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
                 self.loginButton.enabled = false
                 }, completion: nil)
             
             QBRequest.logInWithUserLogin(self.email.text!, password: self.password.text!, successBlock: { (_, user) in
                 
-                if self.email.text == "7676842585"{
+                if self.email.text == "7676842585"
+                {
                     
                     self.registerForAPNS()
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
+                    let adminController = storyBoard.instantiateViewControllerWithIdentifier("Admin") as! AdminViewController
+                    self.presentViewController(adminController, animated:true, completion:nil)
+                    
                 }
                 
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
                 let revealController = storyBoard.instantiateViewControllerWithIdentifier("Reveal") as! SWRevealViewController
                 self.presentViewController(revealController, animated:true, completion:nil)
             }) { (_) in
@@ -89,13 +106,14 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         let application = UIApplication.sharedApplication()
         
         if #available(iOS 8.0, *) {
+            print("iOS 8")
             let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
             let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
             
             application.registerUserNotificationSettings(pushNotificationSettings)
             application.registerForRemoteNotifications()
         }else{
-            
+             print("iOS 7")
             let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
             application.registerForRemoteNotificationTypes(types)
         }
