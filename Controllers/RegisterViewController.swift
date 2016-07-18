@@ -56,40 +56,34 @@ class RegisterViewController: UIViewController {
     {
         if password.text! != confirmPassword.text!
         {
-            if #available(iOS 8.0, *) {
+            
                 let alert = UIAlertController(title: "Password", message: "Password MisMatch", preferredStyle: .Alert)
                 let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
                 alert.addAction(cancelAction)
                 self.presentViewController(alert, animated: true, completion: nil)
                
-            } else {
-                // Fallback on earlier versions
-            }
-           
         }
             else if !isValidEmail(emailID.text!)
             {
-            if #available(iOS 8.0, *) {
+            
             let alert = UIAlertController(title: "Email", message: "Wrong Email.", preferredStyle: .Alert)
                 let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
                 alert.addAction(cancelAction)
                 self.presentViewController(alert, animated: true, completion: nil)
 
                 
-                } else {
-                    // Fallback on earlier versions
-                }
+              
                 
                
-            }else if !isvalidateMobile(mobileNo.text!)
+        }else if !isvalidateMobile(mobileNo.text!)
         {
             
         }
-                      
+        
         else{
             
             let digits = Digits.sharedInstance()
-            digits.logOut()
+            //digits.logOut()
             let configuration = DGTAuthenticationConfiguration(accountFields: .DefaultOptionMask)
             let theme = DGTAppearance()
             theme.bodyFont = UIFont.systemFontOfSize(17)
@@ -112,6 +106,23 @@ class RegisterViewController: UIViewController {
                     QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
                         print(user)
                         print("Registered")
+                        let user = QBUUser()
+                        user.phone = self.mobileNo.text
+                        user.password = self.password.text
+                        user.email = self.emailID.text
+                        QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
+                            print(user)
+                            print("Registered")
+                            let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+                            alert.addAction(cancelAction)
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                            
+                            })
+                        { (errorResponse) -> Void in
+                            print("Error Occur")
+                        }
                         let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
                         self.presentViewController(alert, animated: true, completion: nil)
                         let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
@@ -131,26 +142,63 @@ class RegisterViewController: UIViewController {
                 }
                 
             })
+            
     
             
             
-            //            let user = QBUUser()
-            //            user.phone = self.mobileNo.text
-            //            user.password = self.password.text
-            //            user.email = self.emailID.text
-            //            QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
-            //            print(user)
-            //            print("Registered")
-            //                let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
-            //                self.presentViewController(alert, animated: true, completion: nil)
-            //                let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
-            //                alert.addAction(cancelAction)
-            //            self.dismissViewControllerAnimated(true, completion: nil)
-            //
-            //          })
-            //          { (errorResponse) -> Void in
-            //            print("Error Occur")
-            //            }
+//                        let user = QBUUser()
+//                        user.phone = self.mobileNo.text
+//                        user.password = self.password.text
+//                        user.email = self.emailID.text
+//                        QBRequest.signUp(user, successBlock: { (response, retrievedUser) -> Void in
+//                        print(user)
+//                        print("Registered")
+//                            let alert = UIAlertController(title: "Registration", message: "Registration done successfully", preferredStyle: .Alert)
+//                            self.presentViewController(alert, animated: true, completion: nil)
+//                            let cancelAction = UIAlertAction.init(title: "Cancel", style: .Cancel, handler: nil)
+//                            alert.addAction(cancelAction)
+//                        self.dismissViewControllerAnimated(true, completion: nil)
+//            
+//                      })
+//                      { (errorResponse) -> Void in
+//                        print("Error Occur")
+//                        }
+            
+            
+            
+            
+            
+         
+                
+//                let digits = Digits.sharedInstance()
+//                
+//                // Digits view configuration
+//                
+//                let configuration = DGTAuthenticationConfiguration(accountFields: .DefaultOptionMask)
+//                let appearance = DGTAppearance()
+//                
+//                //appearance.logoImage = UIImage(named: "cake")!
+//                appearance.accentColor = UIColor.blackColor()
+//                appearance.backgroundColor = UIColor.whiteColor()
+//                configuration.appearance = appearance
+//                configuration.phoneNumber = self.mobileNo.text
+//            
+//                
+//                digits.authenticateWithViewController(self, configuration: configuration)
+//                {(session, error) -> Void in
+//                    // if verification successful then session contains varified object else nil and prints error message
+//                    if (session != nil) {
+//                        print(session.phoneNumber)
+//                       // completionHandler(success: true , con:session.phoneNumber)
+//                    } else {
+//                        print(error.localizedDescription)
+//                       // completionHandler(success: false , con:nil)
+//                    }
+//                    
+//                }
+//                
+            
+
             
         }
     }

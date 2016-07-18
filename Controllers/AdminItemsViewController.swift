@@ -255,7 +255,7 @@ UIGraphicsBeginImageContext(rect.size)
 image.drawInRect(rect)
 let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
 UIGraphicsEndImageContext()
-let compressedImageData = UIImageJPEGRepresentation(resizedImage, 1)
+let compressedImageData = UIImageJPEGRepresentation(resizedImage!, 1)
 let image = UIImage(data:compressedImageData!)!
 return image
 }

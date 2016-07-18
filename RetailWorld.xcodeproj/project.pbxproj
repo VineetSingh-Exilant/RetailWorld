@@ -568,16 +568,16 @@
 /* Begin PBXShellScriptBuildPhase section */
 		801636141D094C5400403835 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "./Fabric.framework/run 76129421550ed8ac25277ab447fc2d8e230fedea f671e0c406f91be7dbe303c62959a5df3d61b66d8410eca8f2a48db3173a591e\n\n";
 		};
 		80D575381CF2D95900E9AF4E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -590,9 +590,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-
-";
+			shellScript = "./Fabric.framework/run 76129421550ed8ac25277ab447fc2d8e230fedea f671e0c406f91be7dbe303c62959a5df3d61b66d8410eca8f2a48db3173a591e\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -759,6 +757,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = RetailWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -773,6 +772,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RetailWorld/RetailWorld-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -791,6 +791,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				HEADER_SEARCH_PATHS = " /usr/include/libxml2";
 				INFOPLIST_FILE = RetailWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -804,6 +805,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RetailWorld/RetailWorld-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
